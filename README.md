@@ -7,5 +7,6 @@
 - created develop branch
 - created ReactReadme.md for react specific documentation
 - updated README.md for git repo and project related documentation
-- pusehd to develop branch
+- pushed to develop branch
 - npm install -g sass, pushed to develop branch
+- create \_global.scss partial and update to match style guide, pushed to develop branch
