@@ -11,3 +11,4 @@
 - npm install -g sass, pushed to develop branch
 - create \_global.scss partial and update to match style guide, pushed to develop branch
 - create and switch to branch feature-create-header
+- begin working on the page header. Create header components for the logo, search bar, avatar and upload button
