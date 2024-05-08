@@ -1,0 +1,10 @@
+/* logo.scss */
+.logo {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.logo img {
+  width: 150px;
+  height: 25px;
+}/*# sourceMappingURL=Logo.css.map */

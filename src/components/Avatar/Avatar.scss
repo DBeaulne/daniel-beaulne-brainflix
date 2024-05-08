@@ -1,9 +1,9 @@
 /* avatar.scss */
-@use "../../styles/partials/global";
+$Mercury: #e1e1e1; // Divider line. Form field outline
 
 .avatar {
 	display: flex;
-	background-color: global.$Mercury;
+	background-color: $Mercury;
 	background-image: url("../../assets/Images/Mohan-muruge.jpg");
 	background-size: cover;
 	background-position: 25% 50%;

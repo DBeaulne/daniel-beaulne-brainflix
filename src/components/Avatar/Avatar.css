@@ -1,0 +1,11 @@
+/* avatar.scss */
+.avatar {
+  display: flex;
+  background-color: #e1e1e1;
+  background-image: url("../../assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  background-position: 25% 50%;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}/*# sourceMappingURL=Avatar.css.map */

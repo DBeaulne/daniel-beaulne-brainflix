@@ -1,2 +1,13 @@
 /* Index page styling*/
 @use "./styles/partials/global";
+
+/* Initialization */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
