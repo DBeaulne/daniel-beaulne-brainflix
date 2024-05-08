@@ -1,9 +1,9 @@
 /** Header component */
 import "./Header.scss";
 import React from "react";
-import Logo from "./Logo";
-import Avatar from "./Avatar";
-import SearchBar from "./SearchBar";
+import Logo from "../Components/Logo";
+import Avatar from "../Avatar/Avatar";
+import SearchBar from "../Components/SearchBar";
 
 function Header() {
 	return (
