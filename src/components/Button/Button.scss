@@ -1,0 +1,27 @@
+/** Button styling*/
+@use "../../styles//partials/global";
+
+.button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+
+	&__btn {
+		@include global.button;
+		width: 100%;
+		background-image: url("../../assets/Icons/upload.svg");
+		background-position: 3% center;
+		background-repeat: no-repeat;
+		&:hover {
+			background-color: global.$BrainFlix-DarkBlue;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		left: 0;
+		padding-left: 0.5rem;
+	}
+}

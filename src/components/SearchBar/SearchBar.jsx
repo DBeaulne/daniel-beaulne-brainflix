@@ -9,7 +9,7 @@ function SearchBar() {
 		<>
 			<div className="searchBar">
 				<div className="searchBar__wrapper">
-					<img className="searchBar__icon icon" src={icon} />
+					<img className="searchBar__icon icon" alt="user profile" src={icon} />
 					<textarea
 						className="searchBar__input-field"
 						rows="1"
