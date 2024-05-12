@@ -120,39 +120,6 @@ $siteFontFamily: "Avenir-Next";
 	line-height: 1.25rem;
 }
 
-@mixin mobile {
-	@media screen and (max-width: $mobile-breakpoint) {
-		@content;
-	}
-}
-
-@mixin tablet {
-	@media screen and (min-width: $tablet-breakpoint) {
-		@content;
-	}
-}
-
-@mixin desktop {
-	@media screen and (min-width: $desktop-breakpoint) {
-		@content;
-	}
-}
-
-@mixin button {
-	height: 2.5rem;
-	background-color: $BrainFlix-Blue;
-	color: $White;
-	text-transform: uppercase;
-	border-style: none;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	border-radius: 4px;
-
-	@include tablet {
-		width: unset;
-	}
-}
-
 /* extensions */
 
 /* Initialization */

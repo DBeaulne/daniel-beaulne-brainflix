@@ -1,12 +1,17 @@
 /* header.scss */
+@use "../../styles/partials/mixin";
 
 .header {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-bottom: 1rem;
+
+	@include mixin.tablet {
+		flex-direction: row;
+	}
 }

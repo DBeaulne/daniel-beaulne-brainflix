@@ -1,5 +1,6 @@
 /** Button styling*/
 @use "../../styles//partials/global";
+@use "../../styles/partials/mixin";
 
 .button {
 	display: flex;
@@ -9,10 +10,10 @@
 	align-items: center;
 
 	&__btn {
-		@include global.button;
+		@include mixin.button;
 		width: 100%;
 		background-image: url("../../assets/Icons/upload.svg");
-		background-position: 3% center;
+		background-position: 2% center;
 		background-repeat: no-repeat;
 		&:hover {
 			background-color: global.$BrainFlix-DarkBlue;

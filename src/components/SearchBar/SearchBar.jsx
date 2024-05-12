@@ -1,23 +1,14 @@
 /** Search Bar Component */
 import "./SearchBar.scss";
 import React from "react";
-import Avatar from "../Avatar/Avatar";
-import icon from "../../assets/Icons/search.svg";
+import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 
 function SearchBar() {
 	return (
 		<>
 			<div className="searchBar">
-				<div className="searchBar__wrapper">
-					<img className="searchBar__icon icon" alt="user profile" src={icon} />
-					<textarea
-						className="searchBar__input-field"
-						rows="1"
-						name="searchField"
-						id="search"
-						placeholder="Search"></textarea>
-				</div>
-				<Avatar />
+				<input className="searchBar__input-field" name="searchField" id="search" placeholder="Search"></input>
+				<div className="searchBar__avatar-img avatar-img"></div>
 			</div>
 		</>
 	);
