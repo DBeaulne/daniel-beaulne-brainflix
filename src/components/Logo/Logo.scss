@@ -1,0 +1,19 @@
+/* logo.scss */
+@use "../../styles//partials/global";
+@use "../../styles/partials/mixin";
+
+.logo {
+	display: flex;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	width: 100%;
+
+	@include mixin.tablet {
+		// width: 30%;
+	}
+
+	img {
+		width: 150px;
+		height: 25px;
+	}
+}

@@ -1,4 +1,4 @@
-/* Index page styling*/
+/* header.scss */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -46,15 +46,20 @@ a {
   text-decoration: none;
 }
 
-/* Initialization */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
-
-a {
-  text-decoration: none;
-}/*# sourceMappingURL=App.css.map */
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}/*# sourceMappingURL=Header.css.map */

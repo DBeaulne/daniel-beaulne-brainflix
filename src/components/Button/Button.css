@@ -1,0 +1,157 @@
+/** Button styling*/
+/* Global site styling  */
+/* Colors */
+/* Used for typography, components, branding and are
+solid @ 100% opacity, unless stated otherwise */
+/* Primary Colors*/
+/* Secondary Colors */
+/* Error Code colors */
+/* Media Breakpoints */
+/* Extensions */
+.avatarImg, .button__avatar-img {
+  display: flex;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Mixins */
+/* extensions */
+/* Initialization */
+* {
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global site styling  */
+/* Colors */
+/* Used for typography, components, branding and are
+solid @ 100% opacity, unless stated otherwise */
+/* Primary Colors*/
+/* Secondary Colors */
+/* Error Code colors */
+/* Media Breakpoints */
+/* Extensions */
+.avatarImg, .button__avatar-img {
+  display: flex;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Mixins */
+/* extensions */
+/* Initialization */
+* {
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    justify-content: flex-end;
+    width: 30%;
+  }
+}
+.button__btn {
+  height: 2.5rem;
+  background-color: #0095ff;
+  color: #fff;
+  text-transform: uppercase;
+  border-style: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 4px;
+  width: 100%;
+  background-image: url("../../assets/Icons/upload.svg");
+  background-position: 0.75rem center;
+  background-repeat: no-repeat;
+}
+.button__btn:hover {
+  background-color: #0065ad;
+}
+@media screen and (min-width: 768px) {
+  .button__btn {
+    width: 9.375rem;
+  }
+}
+.button__img-box {
+  display: flex;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .button__img-box {
+    margin-left: 1rem;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button__img-box {
+    margin-left: 2rem;
+  }
+}
+.button__avatar-img {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .button__avatar-img {
+    display: flex;
+  }
+}/*# sourceMappingURL=Button.css.map */

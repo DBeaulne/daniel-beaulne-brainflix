@@ -1,0 +1,19 @@
+/* header.scss */
+@use "../../styles/partials/mixin";
+
+.header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+
+	@include mixin.tablet {
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+}

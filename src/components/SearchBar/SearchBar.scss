@@ -1,0 +1,60 @@
+/** Search Bar styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.searchBar {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	align-items: center;
+
+	@include mixin.tablet {
+		padding-top: 1rem;
+		max-width: 16rem;
+	}
+
+	&__input-field {
+		width: 95vw;
+		height: 2.5rem;
+		align-content: center;
+		border: none;
+		background-color: global.$Alabaster;
+		border: 1px solid global.$Mercury;
+		border-radius: 4px;
+		@include global.mobile-body-copy;
+		color: global.$Silver;
+		background-image: url("../../assets/Icons/search.svg");
+		background-position: 0.75rem center;
+		background-repeat: no-repeat;
+		text-indent: 2.25rem;
+		line-height: 0%;
+		margin-right: 1rem;
+
+		@include mixin.tablet {
+			width: 100%;
+		}
+	}
+
+	&__img-box {
+		display: flex;
+		flex: none;
+		background-color: global.$Mercury;
+		border-radius: 50%;
+		width: 2.25rem;
+		height: 2.25rem;
+		border: none;
+
+		@include mixin.tablet {
+			display: none;
+		}
+	}
+
+	&__avatar-img {
+		@extend .avatarImg;
+
+		@include mixin.tablet {
+			display: none;
+		}
+	}
+}
