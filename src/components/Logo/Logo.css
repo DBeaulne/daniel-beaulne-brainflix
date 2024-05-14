@@ -1,8 +1,103 @@
 /* logo.scss */
+/* Global site styling  */
+/* Colors */
+/* Used for typography, components, branding and are
+solid @ 100% opacity, unless stated otherwise */
+/* Primary Colors*/
+/* Secondary Colors */
+/* Error Code colors */
+/* Media Breakpoints */
+/* Extensions */
+.avatarImg {
+  display: flex;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Mixins */
+/* extensions */
+/* Initialization */
+* {
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global site styling  */
+/* Colors */
+/* Used for typography, components, branding and are
+solid @ 100% opacity, unless stated otherwise */
+/* Primary Colors*/
+/* Secondary Colors */
+/* Error Code colors */
+/* Media Breakpoints */
+/* Extensions */
+.avatarImg {
+  display: flex;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 50%;
+     object-position: 0 50%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Mixins */
+/* extensions */
+/* Initialization */
+* {
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
 .logo {
   display: flex;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  width: 100%;
 }
 .logo img {
   width: 150px;

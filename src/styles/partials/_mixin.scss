@@ -27,8 +27,4 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	border-radius: 4px;
-
-	@include tablet {
-		width: unset;
-	}
 }

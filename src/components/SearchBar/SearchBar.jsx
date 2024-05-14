@@ -8,7 +8,9 @@ function SearchBar() {
 		<>
 			<div className="searchBar">
 				<input className="searchBar__input-field" name="searchField" id="search" placeholder="Search"></input>
-				<div className="searchBar__avatar-img avatar-img"></div>
+				<span class="searchBar__img-box">
+					<img className="searchBar__avatar-img avatar-img" src={avatarImg} alt="" />
+				</span>
 			</div>
 		</>
 	);

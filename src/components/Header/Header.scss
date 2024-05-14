@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixin";
 
 .header {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -13,5 +14,6 @@
 
 	@include mixin.tablet {
 		flex-direction: row;
+		flex-wrap: nowrap;
 	}
 }
