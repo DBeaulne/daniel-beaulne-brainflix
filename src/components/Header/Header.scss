@@ -15,5 +15,13 @@
 	@include mixin.tablet {
 		flex-direction: row;
 		flex-wrap: nowrap;
+		padding-bottom: 1.5rem;
+		padding-left: 2.25rem;
+		padding-right: 2.25rem;
+	}
+
+	@include mixin.desktop {
+		padding-left: 5rem;
+		padding-right: 5rem;
 	}
 }
