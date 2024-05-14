@@ -15,7 +15,7 @@
 	}
 
 	&__input-field {
-		width: 89vw;
+		width: 95vw;
 		height: 2.5rem;
 		align-content: center;
 		border: none;
@@ -38,6 +38,7 @@
 
 	&__img-box {
 		display: flex;
+		flex: none;
 		background-color: global.$Mercury;
 		border-radius: 50%;
 		width: 2.25rem;

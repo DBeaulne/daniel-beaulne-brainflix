@@ -30,6 +30,7 @@
 
 	&__img-box {
 		display: flex;
+		flex: none;
 		background-color: global.$Mercury;
 		border-radius: 50%;
 		width: 2.25rem;
