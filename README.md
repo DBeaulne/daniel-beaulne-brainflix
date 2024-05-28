@@ -19,3 +19,4 @@
 - renamed CurrentVideo component to MainVideo to adhere closer to implementation requirements
 - recreation of Avatar component and utilized in new CommentForm component
 - refinement of styling
+- create VideoStats component for use in the MainVideo, styling as required.

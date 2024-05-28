@@ -1,4 +1,4 @@
-/* Index page styling*/
+/* VideoStats component styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -36,18 +36,39 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* Initialization */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #323232;
-  font-weight: 400;
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+/* VideoStats component styling */
+.videoStats {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.videoStats__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+}
+.videoStats__wrapper p {
+  color: #afafaf;
 }
 
-a {
-  text-decoration: none;
-}/*# sourceMappingURL=App.css.map */
+img {
+  padding-right: 0.25rem;
+}
+
+h3 {
+  font-family: "Avenir-Next";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+
+p,
+h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}/*# sourceMappingURL=VideoStats.css.map */

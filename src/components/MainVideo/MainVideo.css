@@ -1,4 +1,4 @@
-/* Current Video component styling */
+/* MainVideo component styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -36,7 +36,7 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* Current Video component styling */
+/* MainVideo component styling */
 .mainVideo {
   position: relative;
   display: flex;
@@ -67,12 +67,6 @@ solid @ 100% opacity, unless stated otherwise */
     border-bottom: unset;
   }
 }
-.mainVideo__video-stats {
-  width: 100%;
-  height: 5rem;
-  border: 1px solid red;
-  border-bottom: 1px solid #e1e1e1;
-}
 .mainVideo__video-blurb {
   width: 100%;
   height: auto;
@@ -89,4 +83,11 @@ solid @ 100% opacity, unless stated otherwise */
   height: 10rem;
   border: 1px solid rgb(10, 243, 224);
   border-bottom: 1px solid #e1e1e1;
+}
+
+h2 {
+  font-family: "Avenir-Next";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }/*# sourceMappingURL=MainVideo.css.map */

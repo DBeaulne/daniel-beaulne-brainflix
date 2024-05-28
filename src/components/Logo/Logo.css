@@ -78,6 +78,7 @@ solid @ 100% opacity, unless stated otherwise */
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
+  justify-content: center;
 }
 .logo img {
   width: 150px;
