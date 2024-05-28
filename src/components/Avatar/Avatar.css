@@ -1,4 +1,4 @@
-/* logo.scss */
+/** Avatar styling*/
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -8,7 +8,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg {
+.avatarImg, .avatar__img {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -45,7 +45,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg {
+.avatarImg, .avatar__img {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -73,13 +73,45 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-.logo {
+.avatar {
   display: flex;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 100%;
+  flex: none;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  display: none;
 }
-.logo img {
-  width: 150px;
-  height: 25px;
-}/*# sourceMappingURL=Logo.css.map */
+@media screen and (min-width: 768px) {
+  .avatar {
+    margin-left: 1rem;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .avatar {
+    margin-left: 2rem;
+  }
+}
+#searchBar__avatar {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  #searchBar__avatar {
+    display: none;
+  }
+}
+
+#button__avatar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #button__avatar {
+    display: flex;
+  }
+}
+
+#commentForm__avatar {
+  display: flex;
+}/*# sourceMappingURL=Avatar.css.map */

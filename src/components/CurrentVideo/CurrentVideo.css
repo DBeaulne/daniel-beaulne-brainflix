@@ -36,16 +36,6 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* Current Video component styling */
 .currentVideo {
   position: relative;
@@ -89,12 +79,12 @@ a {
 }
 .currentVideo__video-blurb {
   width: 100%;
-  height: 5rem;
+  height: auto;
   border: 1px solid yellow;
 }
 .currentVideo__comment-form {
   width: 100%;
-  height: 5rem;
+  height: auto;
   border: 1px solid teal;
   border-bottom: 1px solid #e1e1e1;
 }

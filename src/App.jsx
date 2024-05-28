@@ -10,21 +10,14 @@ function App() {
 		return video;
 	}
 
-	/* 	function nextVideos(videoData) {
-		const nextVids = videoData.toSpliced(0, 1).map((video) => ({
-			title: video.title,
-			image: video.image,
-			creator: video.channel
-		}));
-		return nextVids;
-	}
- */
 	let currentVid = currentVideo(VideoData);
 
 	return (
 		<>
 			<Header />
-			<CurrentVideo video={currentVid} />
+			<main>
+				<CurrentVideo video={currentVid} />
+			</main>
 		</>
 	);
 }

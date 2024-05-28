@@ -1,4 +1,4 @@
-/* header.scss */
+/** Comment Form styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -8,7 +8,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg {
+.avatarImg, .commentForm__avatar-img {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -36,29 +36,35 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-.header {
-  position: relative;
+/** Comment Form styling */
+.commentForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.commentForm__form-container {
+  display: flex;
+  width: 100%;
+}
+.commentForm__form {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.commentForm__form-input {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+  width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-bottom: 1.5rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}/*# sourceMappingURL=Header.css.map */
+.commentForm__img-box {
+  display: flex;
+  flex: none;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  margin-right: 1rem;
+}/*# sourceMappingURL=CommentForm.css.map */

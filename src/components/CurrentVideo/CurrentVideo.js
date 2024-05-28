@@ -7,7 +7,7 @@ function CurrentVideo(props) {
 
 	return (
 		<>
-			<div className="currentVideo">
+			<section className="currentVideo">
 				{/* placeholder */}
 				<div className="currentVideo__img-box">
 					<img className="currentVideo__video-img" alt="still frame from current video" src={props.video.image} />
@@ -25,15 +25,13 @@ function CurrentVideo(props) {
 					<div className="currentVideo__video-blurb">
 						<p>{props.video.description}</p>
 					</div>
-					<div className="currentVideo__comment-form">
-						<CommentForm numComments={props.video.comments} />
-					</div>
+					<CommentForm numComments={props.video.comments} />
 					<div className="currentVideo__past-comments">
 						<p>past comments go here</p>
 						<p>ToDo: create component to populate comments and pass in array as a prop</p>
 					</div>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 }

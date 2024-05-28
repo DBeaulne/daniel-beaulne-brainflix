@@ -8,7 +8,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg, .searchBar__avatar-img {
+.avatarImg {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -36,16 +36,6 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 /** Search Bar styling */
 .searchBar {
   display: flex;
@@ -82,24 +72,5 @@ a {
 @media screen and (min-width: 768px) {
   .searchBar__input-field {
     width: 100%;
-  }
-}
-.searchBar__img-box {
-  display: flex;
-  flex: none;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: none;
-}
-@media screen and (min-width: 768px) {
-  .searchBar__img-box {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .searchBar__avatar-img {
-    display: none;
   }
 }/*# sourceMappingURL=SearchBar.css.map */

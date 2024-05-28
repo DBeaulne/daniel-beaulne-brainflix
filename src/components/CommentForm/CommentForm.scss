@@ -1,0 +1,43 @@
+/** Comment Form styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.commentForm {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding-bottom: 1rem;
+	align-items: center;
+
+	&__form-container {
+		display: flex;
+		width: 100%;
+	}
+
+	&__form {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+	}
+
+	&__form-input {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__img-box {
+		display: flex;
+		flex: none;
+		background-color: global.$Mercury;
+		border-radius: 50%;
+		width: 2.25rem;
+		height: 2.25rem;
+		border: none;
+		margin-right: 1rem;
+	}
+
+	&__avatar-img {
+		@extend .avatarImg;
+	}
+}

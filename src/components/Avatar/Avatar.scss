@@ -1,0 +1,47 @@
+/** Avatar styling*/
+@use "../../styles//partials/global";
+@use "../../styles/partials/mixin";
+
+.avatar {
+	display: flex;
+	flex: none;
+	background-color: global.$Mercury;
+	border-radius: 50%;
+	width: 2.25rem;
+	height: 2.25rem;
+	border: none;
+	display: none;
+
+	@include mixin.tablet {
+		margin-left: 1rem;
+		display: flex;
+	}
+
+	@include mixin.desktop {
+		margin-left: 2rem;
+	}
+
+	&__img {
+		@extend .avatarImg;
+	}
+}
+
+#searchBar__avatar {
+	display: flex;
+
+	@include mixin.tablet {
+		display: none;
+	}
+}
+
+#button__avatar {
+	display: none;
+
+	@include mixin.tablet {
+		display: flex;
+	}
+}
+
+#commentForm__avatar {
+	display: flex;
+}

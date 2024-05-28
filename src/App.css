@@ -36,21 +36,12 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* Initialization */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 }

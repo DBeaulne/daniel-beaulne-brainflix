@@ -35,26 +35,4 @@
 			width: 100%;
 		}
 	}
-
-	&__img-box {
-		display: flex;
-		flex: none;
-		background-color: global.$Mercury;
-		border-radius: 50%;
-		width: 2.25rem;
-		height: 2.25rem;
-		border: none;
-
-		@include mixin.tablet {
-			display: none;
-		}
-	}
-
-	&__avatar-img {
-		@extend .avatarImg;
-
-		@include mixin.tablet {
-			display: none;
-		}
-	}
 }
