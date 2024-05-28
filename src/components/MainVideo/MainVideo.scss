@@ -3,7 +3,7 @@
 @use "../../styles/partials/global";
 @use "../../styles/partials/mixin";
 
-.currentVideo {
+.mainVideo {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -12,32 +12,27 @@
 	height: auto;
 	border: 1px solid darkblue;
 
-	&__img-box {
-		display: flex;
-		width: 100%;
-		border: 1px solid purple;
-	}
-
-	&__video-img {
-		max-width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
 	&__content-box {
-		width: 100%;
-		height: auto;
 		padding-left: 1rem;
 		padding-right: 1rem;
-		border: 1px solid green;
 		padding-bottom: 1rem; // temporary padding, remove when complete
 	}
 
 	&__video-title {
+		display: flex;
 		width: 100%;
-		height: 5rem;
-		border: 1px solid orange;
-		border-bottom: 1px solid global.$Mercury;
+		// border: 1px solid orange;
+		border-bottom: 1px solid #e1e1e1;
+		align-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		margin-bottom: 0.5rem;
+
+		@include mixin.tablet {
+			border-bottom: unset;
+		}
 	}
 
 	&__video-stats {

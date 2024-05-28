@@ -1,22 +1,22 @@
 import "./App.scss";
 import React, {cloneElement} from "react";
 import Header from "./components/Header/Header";
-import CurrentVideo from "./components/CurrentVideo/CurrentVideo";
+import MainVideo from "./components/MainVideo/MainVideo";
 import VideoData from "./data/video-details.json";
 
 function App() {
-	function currentVideo(videoData) {
+	function mainVideo(videoData) {
 		const video = videoData[0];
 		return video;
 	}
 
-	let currentVid = currentVideo(VideoData);
+	let mainVid = mainVideo(VideoData);
 
 	return (
 		<>
 			<Header />
 			<main>
-				<CurrentVideo video={currentVid} />
+				<MainVideo video={mainVid} />
 			</main>
 		</>
 	);

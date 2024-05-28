@@ -1,0 +1,11 @@
+/* VideoPlayer component styling */
+
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.videoPlayer {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
