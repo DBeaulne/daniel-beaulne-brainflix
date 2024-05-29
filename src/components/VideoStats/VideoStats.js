@@ -4,8 +4,6 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 
 function VideoStats(stats) {
-	console.log(stats);
-
 	return (
 		<>
 			<div className="videoStats">

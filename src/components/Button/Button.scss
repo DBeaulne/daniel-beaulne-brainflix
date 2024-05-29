@@ -16,7 +16,6 @@
 	&__btn {
 		@include mixin.button;
 		width: 100%;
-		background-image: url();
 		background-position: 0.75rem center;
 		background-repeat: no-repeat;
 		&:hover {

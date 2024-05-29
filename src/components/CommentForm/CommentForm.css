@@ -8,7 +8,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg, .commentForm__avatar-img {
+.avatarImg {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -42,7 +42,13 @@ solid @ 100% opacity, unless stated otherwise */
   width: 100%;
   flex-direction: column;
   padding-bottom: 1rem;
-  align-items: center;
+  align-items: flex-start;
+}
+.commentForm__title {
+  padding-bottom: 0.5rem;
+}
+.commentForm__title h3 {
+  font-weight: 600;
 }
 .commentForm__form-container {
   display: flex;
@@ -58,13 +64,7 @@ solid @ 100% opacity, unless stated otherwise */
   flex-direction: column;
   width: 100%;
 }
-.commentForm__img-box {
-  display: flex;
-  flex: none;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: none;
+.commentForm__avatar-container {
+  padding-top: 1.25rem;
   margin-right: 1rem;
 }/*# sourceMappingURL=CommentForm.css.map */

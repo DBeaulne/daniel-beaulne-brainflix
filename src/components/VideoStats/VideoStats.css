@@ -55,8 +55,7 @@ solid @ 100% opacity, unless stated otherwise */
 .videoStats__wrapper p {
   color: #afafaf;
 }
-
-img {
+.videoStats img {
   padding-right: 0.25rem;
 }
 

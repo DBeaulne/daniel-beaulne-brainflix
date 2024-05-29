@@ -1,5 +1,6 @@
 import "./CommentForm.scss";
 import React from "react";
+import Avatar from "../Avatar/Avatar";
 import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 
 function CommentForm(props) {
@@ -7,14 +8,12 @@ function CommentForm(props) {
 		<>
 			<section className="commentForm" id="commentForm">
 				<div className="commentForm__title">
-					<h4>{props.numComments.length} Comments</h4>
+					<h3>{props.numComments.length} Comments</h3>
 				</div>
 				<div className="commentForm__form-container">
 					<form action="submit" className="commentForm__form" id="commentForm" noValidate>
-						<div className="commentForm__avatar">
-							<span className="commentForm__img-box">
-								<img className="commentForm__avatar-img avatar-img" src={avatarImg} alt="" />
-							</span>
+						<div className="commentForm__avatar-container">
+							<Avatar image={avatarImg} id="commentForm__avatar" />
 						</div>
 						<div className="commentForm__form-input">
 							<label className="commentForm__form-label" htmlFor="comment-area">

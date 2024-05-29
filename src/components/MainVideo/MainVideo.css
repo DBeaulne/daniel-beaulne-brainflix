@@ -70,7 +70,16 @@ solid @ 100% opacity, unless stated otherwise */
 .mainVideo__video-blurb {
   width: 100%;
   height: auto;
-  border: 1px solid yellow;
+  font-family: "Avenir-Next";
+  font-size: 0.813rem;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .mainVideo__video-blurb {
+    font-family: "Avenir-Next";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 .mainVideo__comment-form {
   width: 100%;
