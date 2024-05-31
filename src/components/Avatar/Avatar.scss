@@ -3,7 +3,6 @@
 @use "../../styles/partials/mixin";
 
 .avatar {
-	display: flex;
 	flex: none;
 	background-color: global.$Mercury;
 	border-radius: 50%;
@@ -26,7 +25,7 @@
 	}
 }
 
-#searchBar__avatar {
+#searchBar-avatar {
 	display: flex;
 
 	@include mixin.tablet {
@@ -34,7 +33,7 @@
 	}
 }
 
-#button__avatar {
+#button-avatar {
 	display: none;
 
 	@include mixin.tablet {
@@ -42,6 +41,10 @@
 	}
 }
 
-#commentForm__avatar {
+#commentForm-avatar {
+	display: flex;
+}
+
+#comment-avatar {
 	display: flex;
 }

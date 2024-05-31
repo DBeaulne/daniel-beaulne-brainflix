@@ -15,7 +15,7 @@ function CommentForm({ comments }) {
 				<div className="commentForm__form-container">
 					<form action="submit" className="commentForm__form" id="commentForm" noValidate>
 						<div className="commentForm__avatar-container">
-							<Avatar image={avatarImg} id="commentForm__avatar" />
+							<Avatar image={avatarImg} id="commentForm-avatar" />
 						</div>
 						<div className="commentForm__textarea">
 							<label className="commentForm__form-label" htmlFor="comment-area">

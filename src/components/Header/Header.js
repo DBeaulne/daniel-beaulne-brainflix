@@ -14,11 +14,11 @@ function Header() {
 			<Logo />
 			<div className="header__searchBar-container">
 				<SearchBar />
-				<Avatar image={avatarImg} id="searchBar__avatar" />
+				<Avatar image={avatarImg} id="searchBar-avatar" />
 			</div>
 			<div className="header__button-container">
 				<Button text="upload" icon={buttonIcon} />
-				<Avatar image={avatarImg} id="button__avatar" />
+				<Avatar image={avatarImg} id="button-avatar" />
 			</div>
 		</div>
 	);

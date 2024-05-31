@@ -43,6 +43,7 @@ solid @ 100% opacity, unless stated otherwise */
   flex-direction: column;
   padding-bottom: 1rem;
   align-items: flex-start;
+  border-bottom: 1px solid #e1e1e1;
 }
 .commentForm__title {
   padding-bottom: 0.5rem;
@@ -59,7 +60,7 @@ solid @ 100% opacity, unless stated otherwise */
   width: 100%;
   flex-direction: row;
 }
-.commentForm__form-input {
+.commentForm__textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -67,4 +68,25 @@ solid @ 100% opacity, unless stated otherwise */
 .commentForm__avatar-container {
   padding-top: 1.25rem;
   margin-right: 1rem;
+}
+.commentForm__form-input {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  padding: 0.75rem;
+}
+.commentForm__form-input:active {
+  border: 1px solid #323232;
+}
+.commentForm__form-label {
+  font-family: "Avenir-Next";
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+textarea {
+  resize: none;
 }/*# sourceMappingURL=CommentForm.css.map */

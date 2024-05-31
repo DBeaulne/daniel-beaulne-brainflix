@@ -3,6 +3,7 @@ import React from "react";
 import CommentForm from "../CommentForm/CommentForm";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoStats from "../VideoStats/VideoStats";
+import VideoComment from "../VideoComment/VideoComment";
 
 function MainVideo({ video }) {
 	const videoStats = video;
@@ -20,10 +21,7 @@ function MainVideo({ video }) {
 						<p>{video.description}</p>
 					</div>
 					<CommentForm comments={video.comments} />
-					<div className="mainVideo__past-comments">
-						<p>past comments go here</p>
-						<p>ToDo: create component to populate comments and pass in array as a prop</p>
-					</div>
+					<VideoComment videoComments={video.comments} />
 				</div>
 			</section>
 		</>

@@ -57,17 +57,4 @@ solid @ 100% opacity, unless stated otherwise */
 }
 .videoStats img {
   padding-right: 0.25rem;
-}
-
-h3 {
-  font-family: "Avenir-Next";
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-weight: 600;
-}
-
-p,
-h3 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=VideoStats.css.map */

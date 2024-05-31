@@ -1,0 +1,43 @@
+/* VideoComment component styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.videoComment {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	border-bottom: 1px solid global.$Mercury;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	&__wrapper {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-left: 1rem;
+
+		p {
+			padding: unset;
+			@include global.mobile-body-copy;
+		}
+	}
+
+	&__comment-info {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__user-name {
+		font-weight: 600;
+	}
+
+	&__timestamp {
+		color: global.$Silver;
+	}
+
+	&__comment {
+		width: 100%;
+	}
+}

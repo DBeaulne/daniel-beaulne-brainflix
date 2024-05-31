@@ -61,4 +61,27 @@ solid @ 100% opacity, unless stated otherwise */
     padding-left: 5rem;
     padding-right: 5rem;
   }
+}
+.header__searchBar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header__searchBar-container {
+    margin-right: 2rem;
+  }
+}
+.header__button-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__button-container {
+    justify-content: center;
+    width: 50%;
+  }
 }/*# sourceMappingURL=Header.css.map */

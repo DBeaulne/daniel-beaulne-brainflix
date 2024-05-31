@@ -26,14 +26,3 @@
 		padding-right: 0.25rem;
 	}
 }
-
-h3 {
-	@include global.mobile-subheader;
-	font-weight: 600;
-}
-
-p,
-h3 {
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-}

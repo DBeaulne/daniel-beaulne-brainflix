@@ -16,3 +16,12 @@
 a {
 	text-decoration: none;
 }
+
+h2 {
+	@include global.mobile-page-header;
+	font-weight: 700;
+}
+h3 {
+	@include global.mobile-subheader;
+	font-weight: 600;
+}

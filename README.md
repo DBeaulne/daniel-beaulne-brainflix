@@ -23,4 +23,4 @@
 - complete CommentForm coding and styling.
 - refine Header layout and component call.
 - Clean up SearchBar and Button components, removed Avatar inclusion in these components to keep separation of concerns
-- create MainVideo comment display component and style accordingly
+- create MainVideo comment component to loop through comments prop and display accordingly.
