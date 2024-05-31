@@ -20,3 +20,7 @@
 - recreation of Avatar component and utilized in new CommentForm component
 - refinement of styling
 - create VideoStats component for use in the MainVideo, styling as required.
+- complete CommentForm coding and styling.
+- refine Header layout and component call.
+- Clean up SearchBar and Button components, removed Avatar inclusion in these components to keep separation of concerns
+-

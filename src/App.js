@@ -1,8 +1,9 @@
 import "./App.scss";
-import React, {cloneElement} from "react";
+import React, { cloneElement } from "react";
 import Header from "./components/Header/Header";
 import MainVideo from "./components/MainVideo/MainVideo";
 import VideoData from "./data/video-details.json";
+import { useState } from "react";
 
 function App() {
 	/* 	function mainVideo(videoData) {
@@ -13,11 +14,13 @@ function App() {
 	let mainVid = mainVideo(VideoData);
 	console.log(VideoData); */
 
+	const [mainVideo, setMainVideo] = useState(VideoData[0]);
+
 	return (
 		<>
 			<Header />
 			<main>
-				<MainVideo video={VideoData[0]} />
+				<MainVideo video={mainVideo} />
 			</main>
 		</>
 	);

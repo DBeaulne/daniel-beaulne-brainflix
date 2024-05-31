@@ -5,13 +5,21 @@ import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
 import Button from "../Button/Button";
 import buttonIcon from "../../assets/Icons/upload.svg";
+import Avatar from "../Avatar/Avatar";
+import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 
 function Header() {
 	return (
 		<div className="header">
 			<Logo />
-			<SearchBar />
-			<Button text="upload" icon={buttonIcon} />
+			<div className="header__searchBar-container">
+				<SearchBar />
+				<Avatar image={avatarImg} id="searchBar__avatar" />
+			</div>
+			<div className="header__button-container">
+				<Button text="upload" icon={buttonIcon} />
+				<Avatar image={avatarImg} id="button__avatar" />
+			</div>
 		</div>
 	);
 }

@@ -4,25 +4,22 @@ import CommentForm from "../CommentForm/CommentForm";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoStats from "../VideoStats/VideoStats";
 
-function MainVideo(props) {
-	const title = props.video.title;
-	const videoPoster = props.video.image;
-	const videoStats = props.video;
+function MainVideo({ video }) {
+	const videoStats = video;
 
 	return (
 		<>
 			<section className="mainVideo">
-				{/* placeholder */}
-				<VideoPlayer image={videoPoster} />
+				<VideoPlayer image={video.image} />
 				<div className="mainVideo__content-box">
 					<div className="mainVideo__video-title">
-						<h2>{title}</h2>
+						<h2>{video.title}</h2>
 					</div>
 					<VideoStats stats={videoStats} />
 					<div className="mainVideo__video-blurb">
-						<p>{props.video.description}</p>
+						<p>{video.description}</p>
 					</div>
-					<CommentForm numComments={props.video.comments} />
+					<CommentForm comments={video.comments} />
 					<div className="mainVideo__past-comments">
 						<p>past comments go here</p>
 						<p>ToDo: create component to populate comments and pass in array as a prop</p>

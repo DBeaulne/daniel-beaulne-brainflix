@@ -6,7 +6,6 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	padding-bottom: 1rem;
 	align-items: center;
 
 	@include mixin.tablet {
@@ -15,7 +14,7 @@
 	}
 
 	&__input-field {
-		width: 95vw;
+		width: 100%;
 		height: 2.5rem;
 		align-content: center;
 		border: none;

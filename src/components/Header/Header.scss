@@ -24,4 +24,27 @@
 		padding-left: 5rem;
 		padding-right: 5rem;
 	}
+
+	&__searchBar-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		padding-bottom: 1rem;
+
+		@include mixin.tablet {
+			margin-right: 2rem;
+		}
+	}
+
+	&__button-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		@include mixin.tablet {
+			justify-content: center;
+			width: 50%;
+		}
+	}
 }
