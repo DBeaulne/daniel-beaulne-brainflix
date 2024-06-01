@@ -1,0 +1,20 @@
+/* VideoComment component styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.nextVideo {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding-bottom: 1rem;
+	height: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+
+	&__title {
+		text-transform: uppercase;
+		color: global.$Silver;
+		padding-bottom: 1rem;
+	}
+}
