@@ -13,13 +13,9 @@ function MainVideo({ video }) {
 			<section className="mainVideo">
 				<VideoPlayer image={video.image} />
 				<div className="mainVideo__content-box">
-					<div className="mainVideo__video-title">
-						<h2>{video.title}</h2>
-					</div>
+					<h2 className="mainVideo__video-title">{video.title}</h2>
 					<VideoStats stats={videoStats} />
-					<div className="mainVideo__video-blurb">
-						<p>{video.description}</p>
-					</div>
+					<p className="mainVideo__video-blurb">{video.description}</p>
 					<CommentForm comments={video.comments} />
 					<VideoComment videoComments={video.comments} />
 				</div>

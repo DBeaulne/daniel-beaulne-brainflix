@@ -53,13 +53,12 @@ solid @ 100% opacity, unless stated otherwise */
 .mainVideo__video-title {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid global;
+  border-bottom: 1px solid #e1e1e1;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .mainVideo__video-title {

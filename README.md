@@ -26,3 +26,5 @@
 - create MainVideo comment component to loop through comments prop and display accordingly.
   > > > > feature-next-videos
 - create NextVideos component to loop through, and display, the array of next videos
+- complete functional programming of NextVideo component
+- complete integration of state and the logic to change which video is displayed in the MainVideo component

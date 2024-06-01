@@ -40,7 +40,6 @@ solid @ 100% opacity, unless stated otherwise */
 .videoStats {
   display: flex;
   width: 100%;
-  height: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e1e1e1;
@@ -53,8 +52,17 @@ solid @ 100% opacity, unless stated otherwise */
   height: 100%;
 }
 .videoStats__wrapper p {
+  display: flex;
   color: #afafaf;
+  font-family: "Avenir-Next";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  align-content: center;
+}
+.videoStats__wrapper h3 {
+  height: auto;
+  line-height: 1.375rem;
 }
 .videoStats img {
-  padding-right: 0.25rem;
+  padding-right: 0.5rem;
 }/*# sourceMappingURL=VideoStats.css.map */

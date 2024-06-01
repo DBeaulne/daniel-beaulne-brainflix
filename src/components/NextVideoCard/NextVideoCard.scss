@@ -26,6 +26,7 @@
 	&__title,
 	&__channel {
 		@include global.mobile-body-copy;
+		text-align: left;
 	}
 
 	&__title {

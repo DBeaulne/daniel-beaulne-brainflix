@@ -1,12 +1,15 @@
 import "./NextVideoCard.scss";
 import React from "react";
 
-function NextVideoCard({ next }) {
-	console.log(next);
+function NextVideoCard({ next, select }) {
+	function handleClick(e) {
+		e.preventDefault();
+		select(next.id);
+	}
 
 	return (
 		<>
-			<div className="videoCard">
+			<div className="videoCard" onClick={handleClick}>
 				<img className="videoCard__image" src={next.image} alt=""></img>
 				<div className="videoCard__info">
 					<p className="videoCard__title">{next.title}</p>
