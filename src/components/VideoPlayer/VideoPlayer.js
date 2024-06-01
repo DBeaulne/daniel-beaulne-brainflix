@@ -5,7 +5,7 @@ function VideoPlayer(image) {
 	return (
 		<>
 			<div className="videoPlayer">
-				<video controls poster={image.image} width="100%"></video>
+				<video controls poster={image.image}></video>
 			</div>
 		</>
 	);

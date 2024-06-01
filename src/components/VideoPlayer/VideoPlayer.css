@@ -42,4 +42,15 @@ solid @ 100% opacity, unless stated otherwise */
   width: 100%;
   justify-content: center;
   align-items: center;
+  background-color: #323232;
+}
+.videoPlayer video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+@media screen and (min-width: 768px) {
+  .videoPlayer video {
+    width: 90%;
+  }
 }/*# sourceMappingURL=VideoPlayer.css.map */
