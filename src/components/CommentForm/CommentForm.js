@@ -13,23 +13,24 @@ function CommentForm({ comments }) {
 					<h3>{comments.length} Comments</h3>
 				</div>
 				<div className="commentForm__form-container">
-					<form action="submit" className="commentForm__form" id="commentForm" noValidate>
-						<div className="commentForm__avatar-container">
-							<Avatar image={avatarImg} id="commentForm-avatar" />
-						</div>
-						<div className="commentForm__textarea">
-							<label className="commentForm__form-label" htmlFor="comment-area">
-								join the conversation
-							</label>
-							<textarea
-								className="commentForm__form-input"
-								name="comment"
-								rows="5"
-								id="comment-area"
-								placeholder="Add a new comment"></textarea>
-							<Button text="comment" icon={buttonIcon} />
-						</div>
-					</form>
+					<div className="commentForm__avatar-container">
+						<Avatar image={avatarImg} id="commentForm-avatar" />
+					</div>
+					<div className="commentForm__input-container">
+						<form action="submit" className="commentForm__form" id="commentForm" noValidate>
+							<div className="commentForm__textarea">
+								<label className="commentForm__form-label" htmlFor="comment-area">
+									join the conversation
+								</label>
+								<textarea
+									className="commentForm__form-input"
+									name="comment"
+									id="comment-area"
+									placeholder="Add a new comment"></textarea>
+							</div>
+						</form>
+						<Button text="comment" icon={buttonIcon} />
+					</div>
 				</div>
 			</section>
 		</>

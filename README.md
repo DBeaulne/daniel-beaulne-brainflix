@@ -30,3 +30,4 @@
 - complete integration of state and the logic to change which video is displayed in the MainVideo component
 - > > > feature-styling
 - begin styling the app for tablet breakpoints
+- component styling for breakpoints. SearchBar, vidoePlayer, title, VideoStats, VideoBlurb and CommentForm complete

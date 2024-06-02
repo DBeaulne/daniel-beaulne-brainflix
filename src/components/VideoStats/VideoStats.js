@@ -7,11 +7,11 @@ function VideoStats(stats) {
 	return (
 		<>
 			<div className="videoStats">
-				<div className="videoStats__wrapper">
+				<div className="videoStats__wrapper videoStats__wrapper--left">
 					<h3>By {stats.stats.channel}</h3>
 					<p>{new Date(stats.stats.timestamp).toLocaleDateString()}</p>
 				</div>
-				<div className="videoStats__wrapper">
+				<div className="videoStats__wrapper videoStats__wrapper--right">
 					<p>
 						<img src={viewsIcon} /> {stats.stats.views}
 					</p>

@@ -11,6 +11,7 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-bottom: 1rem;
+	padding-top: 1rem;
 
 	@include mixin.tablet {
 		flex-direction: row;
@@ -33,7 +34,8 @@
 		padding-bottom: 1rem;
 
 		@include mixin.tablet {
-			margin-right: 2rem;
+			justify-content: flex-end;
+			padding-bottom: unset;
 		}
 	}
 
@@ -43,8 +45,8 @@
 		width: 100%;
 
 		@include mixin.tablet {
-			justify-content: center;
-			width: 50%;
+			max-width: 15rem;
+			justify-content: space-between;
 		}
 	}
 }
