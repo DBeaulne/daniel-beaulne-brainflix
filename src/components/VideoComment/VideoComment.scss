@@ -14,11 +14,22 @@
 		display: flex;
 		width: 100%;
 		flex-direction: column;
-		margin-left: 1rem;
+		padding-left: 1rem;
+
+		@include mixin.tablet {
+			padding-left: 1.5rem;
+		}
+
+		@include mixin.desktop {
+			padding-right: 1.5rem;
+		}
 
 		p {
-			padding: unset;
 			@include global.mobile-body-copy;
+
+			@include mixin.tablet {
+				@include global.tablet-body-copy;
+			}
 		}
 	}
 
@@ -27,6 +38,7 @@
 		width: 100%;
 		flex-direction: row;
 		justify-content: space-between;
+		padding-bottom: 0.5rem;
 	}
 
 	&__user-name {

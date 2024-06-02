@@ -77,12 +77,11 @@ solid @ 100% opacity, unless stated otherwise */
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .button {
-    justify-content: flex-end;
-    width: 30%;
+    max-width: 11rem;
   }
 }
 .button__btn {
@@ -94,15 +93,10 @@ solid @ 100% opacity, unless stated otherwise */
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 4px;
-  width: 100%;
   background-position: 0.75rem center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 .button__btn:hover {
   background-color: #0065ad;
-}
-@media screen and (min-width: 768px) {
-  .button__btn {
-    width: 9.375rem;
-  }
 }/*# sourceMappingURL=Button.css.map */

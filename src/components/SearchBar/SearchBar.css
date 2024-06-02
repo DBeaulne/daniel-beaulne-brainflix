@@ -45,8 +45,10 @@ solid @ 100% opacity, unless stated otherwise */
 }
 @media screen and (min-width: 768px) {
   .searchBar {
-    padding-top: 1rem;
-    max-width: 16rem;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+    min-width: 15rem;
+    max-width: 17rem;
   }
 }
 .searchBar__input-field {
@@ -71,5 +73,6 @@ solid @ 100% opacity, unless stated otherwise */
 @media screen and (min-width: 768px) {
   .searchBar__input-field {
     width: 100%;
+    margin-right: unset;
   }
 }/*# sourceMappingURL=SearchBar.css.map */

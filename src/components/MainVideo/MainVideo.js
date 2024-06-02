@@ -1,7 +1,6 @@
 import "./MainVideo.scss";
 import React from "react";
 import CommentForm from "../CommentForm/CommentForm";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoStats from "../VideoStats/VideoStats";
 import VideoComment from "../VideoComment/VideoComment";
 
@@ -11,7 +10,6 @@ function MainVideo({ video }) {
 	return (
 		<>
 			<section className="mainVideo">
-				<VideoPlayer image={video.image} />
 				<div className="mainVideo__content-box">
 					<h2 className="mainVideo__video-title">{video.title}</h2>
 					<VideoStats stats={videoStats} />

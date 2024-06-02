@@ -55,29 +55,70 @@ solid @ 100% opacity, unless stated otherwise */
   display: flex;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .commentForm__form-container {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .commentForm__form-container {
+    padding-right: 1.5rem;
+  }
+}
 .commentForm__form {
   display: flex;
   width: 100%;
   flex-direction: row;
 }
-.commentForm__textarea {
+@media screen and (min-width: 768px) {
+  .commentForm__form {
+    padding-right: 1.5rem;
+  }
+}
+.commentForm__input-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .commentForm__input-container {
+    flex-direction: row;
+    align-items: flex-end;
+    padding-left: 1.5rem;
+  }
+}
+.commentForm__textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .commentForm__textarea {
+    padding-bottom: unset;
+  }
+}
 .commentForm__avatar-container {
   padding-top: 1.25rem;
-  margin-right: 1rem;
 }
 .commentForm__form-input {
-  margin-bottom: 1rem;
   border-radius: 4px;
   border: 1px solid #e1e1e1;
   background-color: #fafafa;
   padding: 0.75rem;
+  min-width: 15rem;
+  font-family: "Avenir-Next";
+  font-size: 0.813rem;
+  line-height: 1.25rem;
 }
-.commentForm__form-input:active {
-  border: 1px solid #323232;
+.commentForm__form-input:active, .commentForm__form-input:focus-visible {
+  border: 1px solid #0095ff;
+  outline: 1px solid #0095ff;
+}
+@media screen and (min-width: 768px) {
+  .commentForm__form-input {
+    padding: unset;
+  }
 }
 .commentForm__form-label {
   font-family: "Avenir-Next";
@@ -86,7 +127,21 @@ solid @ 100% opacity, unless stated otherwise */
   text-transform: uppercase;
   color: #afafaf;
 }
+.commentForm__btn-container {
+  display: flex;
+  width: 15rem;
+}
 
 textarea {
   resize: none;
+}
+textarea::-moz-placeholder {
+  text-indent: 1rem;
+  vertical-align: center;
+  padding-top: 0.7rem;
+}
+textarea::placeholder {
+  text-indent: 1rem;
+  vertical-align: center;
+  padding-top: 0.7rem;
 }/*# sourceMappingURL=CommentForm.css.map */

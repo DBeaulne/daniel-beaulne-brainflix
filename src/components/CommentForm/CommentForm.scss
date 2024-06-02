@@ -24,6 +24,10 @@
 		@include mixin.tablet {
 			align-items: center;
 		}
+
+		@include mixin.desktop {
+			padding-right: 1.5rem;
+		}
 	}
 
 	&__form {
@@ -86,6 +90,11 @@
 		@include global.tablet-label;
 		text-transform: uppercase;
 		color: global.$Silver;
+	}
+
+	&__btn-container {
+		display: flex;
+		width: 15rem;
 	}
 }
 

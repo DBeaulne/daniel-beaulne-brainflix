@@ -29,7 +29,9 @@ function CommentForm({ comments }) {
 									placeholder="Add a new comment"></textarea>
 							</div>
 						</form>
-						<Button text="comment" icon={buttonIcon} />
+						<div className="commentForm__btn-container">
+							<Button text="comment" icon={buttonIcon} />
+						</div>
 					</div>
 				</div>
 			</section>

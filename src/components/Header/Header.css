@@ -46,6 +46,7 @@ solid @ 100% opacity, unless stated otherwise */
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -58,8 +59,8 @@ solid @ 100% opacity, unless stated otherwise */
 }
 @media screen and (min-width: 1280px) {
   .header {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
   }
 }
 .header__searchBar-container {
@@ -71,7 +72,8 @@ solid @ 100% opacity, unless stated otherwise */
 }
 @media screen and (min-width: 768px) {
   .header__searchBar-container {
-    margin-right: 2rem;
+    justify-content: flex-end;
+    padding-bottom: unset;
   }
 }
 .header__button-container {
@@ -81,7 +83,7 @@ solid @ 100% opacity, unless stated otherwise */
 }
 @media screen and (min-width: 768px) {
   .header__button-container {
-    justify-content: center;
-    width: 50%;
+    max-width: 15rem;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=Header.css.map */

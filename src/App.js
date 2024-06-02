@@ -1,6 +1,7 @@
 import "./App.scss";
 import React, { useState } from "react";
 import Header from "./components/Header/Header";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import MainVideo from "./components/MainVideo/MainVideo";
 import NextVideos from "./components/NextVideos/NextVideos";
 import VideoData from "./data/video-details.json";
@@ -22,9 +23,14 @@ function App() {
 	return (
 		<>
 			<Header />
-			<main>
-				<MainVideo video={mainVideo} />
-				<NextVideos videos={nextVideo} currVideoID={mainVideo.id} onVideoSelect={handleVideoSelect} />
+			<VideoPlayer image={mainVideo.image} />
+			<main className="mainContent">
+				<div className="mainVideo-container">
+					<MainVideo video={mainVideo} />
+				</div>
+				<div className="nextVideo-container">
+					<NextVideos videos={nextVideo} currVideoID={mainVideo.id} onVideoSelect={handleVideoSelect} />
+				</div>
 			</main>
 		</>
 	);

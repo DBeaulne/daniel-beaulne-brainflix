@@ -7,6 +7,7 @@
 	width: 100%;
 	flex-direction: row;
 	padding-bottom: 1rem;
+	max-width: 22rem;
 
 	&__image {
 		width: 35%;
@@ -18,15 +19,25 @@
 	&__info {
 		display: flex;
 		width: auto;
+		max-width: 11rem;
 		flex-direction: column;
 		padding-left: 1rem;
 		justify-content: space-between;
+
+		@include mixin.tablet {
+			max-width: 12rem;
+		}
 	}
 
 	&__title,
 	&__channel {
 		@include global.mobile-body-copy;
 		text-align: left;
+
+		@include mixin.tablet {
+			@include global.tablet-body-copy;
+			line-height: 1.25rem;
+		}
 	}
 
 	&__title {

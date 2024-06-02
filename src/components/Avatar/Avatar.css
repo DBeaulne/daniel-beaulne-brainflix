@@ -84,13 +84,9 @@ solid @ 100% opacity, unless stated otherwise */
 }
 @media screen and (min-width: 768px) {
   .avatar {
-    margin-left: 1rem;
     display: flex;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .avatar {
-    margin-left: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 #searchBar-avatar {

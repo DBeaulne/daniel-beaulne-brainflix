@@ -44,12 +44,42 @@ solid @ 100% opacity, unless stated otherwise */
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .videoStats {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .videoStats {
+    padding-right: 1.5rem;
+  }
+}
 .videoStats__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 50%;
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .videoStats__wrapper {
+    flex-direction: row;
+  }
+  .videoStats__wrapper--left {
+    justify-content: flex-start;
+  }
+  .videoStats__wrapper--right {
+    justify-content: flex-end;
+  }
+  .videoStats__wrapper p {
+    padding-left: 2.25rem;
+  }
+}
+.videoStats__wrapper p,
+.videoStats__wrapper h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .videoStats__wrapper p {
   display: flex;
