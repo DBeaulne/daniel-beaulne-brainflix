@@ -11,9 +11,42 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 	padding-bottom: 1rem;
+	padding-top: 1rem;
 
 	@include mixin.tablet {
 		flex-direction: row;
 		flex-wrap: nowrap;
+		padding-bottom: 1.5rem;
+		padding-left: 2.25rem;
+		padding-right: 2.25rem;
+	}
+
+	@include mixin.desktop {
+		padding-left: 7.5rem;
+		padding-right: 7.5rem;
+	}
+
+	&__searchBar-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		padding-bottom: 1rem;
+
+		@include mixin.tablet {
+			justify-content: flex-end;
+			padding-bottom: unset;
+		}
+	}
+
+	&__button-container {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+
+		@include mixin.tablet {
+			max-width: 15rem;
+			justify-content: space-between;
+		}
 	}
 }

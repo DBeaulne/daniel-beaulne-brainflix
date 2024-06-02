@@ -1,0 +1,65 @@
+/* VideoStats component styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.videoStats {
+	display: flex;
+	width: 100%;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid global.$Mercury;
+
+	@include mixin.tablet {
+		padding-top: unset;
+		padding-bottom: unset;
+	}
+
+	@include mixin.desktop {
+		padding-right: 1.5rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 50%;
+		height: 100%;
+
+		@include mixin.tablet {
+			flex-direction: row;
+
+			&--left {
+				justify-content: flex-start;
+			}
+
+			&--right {
+				justify-content: flex-end;
+			}
+
+			p {
+				padding-left: 2.25rem;
+			}
+		}
+		p,
+		h3 {
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		p {
+			display: flex;
+			color: global.$Silver;
+			@include global.tablet-body-copy;
+			align-content: center;
+		}
+
+		h3 {
+			height: auto;
+			line-height: 1.375rem;
+		}
+	}
+
+	img {
+		padding-right: 0.5rem;
+	}
+}

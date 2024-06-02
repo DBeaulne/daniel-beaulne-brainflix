@@ -1,4 +1,4 @@
-/* header.scss */
+/* MainVideo component styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -36,54 +36,69 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-.header {
+/* MainVideo component styling */
+.mainVideo {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.mainVideo__content-box {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
-  padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-bottom: 1.5rem;
+  .mainVideo__content-box {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
+  .mainVideo__content-box {
     padding-left: 7.5rem;
-    padding-right: 7.5rem;
+    padding-right: unset;
+    height: 100%;
   }
 }
-.header__searchBar-container {
+.mainVideo__video-title {
   display: flex;
-  flex-direction: row;
   width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  align-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .header__searchBar-container {
-    justify-content: flex-end;
+  .mainVideo__video-title {
+    border-bottom: unset;
+    padding-top: 2.25rem;
     padding-bottom: unset;
   }
 }
-.header__button-container {
-  display: flex;
-  flex-direction: row;
+.mainVideo__video-blurb {
   width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "Avenir-Next";
+  font-size: 0.813rem;
+  line-height: 1.25rem;
 }
 @media screen and (min-width: 768px) {
-  .header__button-container {
-    max-width: 15rem;
-    justify-content: space-between;
+  .mainVideo__video-blurb {
+    font-family: "Avenir-Next";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
-}/*# sourceMappingURL=Header.css.map */
+}
+@media screen and (min-width: 1280px) {
+  .mainVideo__video-blurb {
+    padding-right: 1.5rem;
+  }
+}/*# sourceMappingURL=MainVideo.css.map */

@@ -1,0 +1,109 @@
+/** Comment Form styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.commentForm {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding-bottom: 1rem;
+	align-items: flex-start;
+	border-bottom: 1px solid global.$Mercury;
+
+	&__title {
+		padding-bottom: 0.5rem;
+		h3 {
+			font-weight: 600;
+		}
+	}
+
+	&__form-container {
+		display: flex;
+		width: 100%;
+
+		@include mixin.tablet {
+			align-items: center;
+		}
+
+		@include mixin.desktop {
+			padding-right: 1.5rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+
+		@include mixin.tablet {
+			padding-right: 1.5rem;
+		}
+	}
+
+	&__input-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		@include mixin.tablet {
+			flex-direction: row;
+			align-items: flex-end;
+			padding-left: 1.5rem;
+		}
+	}
+
+	&__textarea {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-bottom: 1rem;
+
+		@include mixin.tablet {
+			padding-bottom: unset;
+		}
+	}
+
+	&__avatar-container {
+		padding-top: 1.25rem;
+	}
+
+	&__form-input {
+		border-radius: 4px;
+		border: 1px solid global.$Mercury;
+		background-color: global.$Alabaster;
+		padding: 0.75rem;
+		min-width: 15rem;
+		@include global.mobile-body-copy;
+
+		&:active,
+		&:focus-visible {
+			border: 1px solid global.$BrainFlix-Blue;
+			outline: 1px solid global.$BrainFlix-Blue;
+		}
+
+		@include mixin.tablet {
+			padding: unset;
+		}
+	}
+
+	&__form-label {
+		@include global.tablet-label;
+		text-transform: uppercase;
+		color: global.$Silver;
+	}
+
+	&__btn-container {
+		display: flex;
+		width: 15rem;
+	}
+}
+
+textarea {
+	resize: none;
+
+	&::placeholder {
+		text-indent: 1rem;
+		vertical-align: center;
+		padding-top: 0.7rem;
+	}
+}

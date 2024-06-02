@@ -12,8 +12,24 @@
 - create \_global.scss partial and update to match style guide, pushed to develop branch
 - create and switch to branch feature-create-header
 - begin working on the page header. Create header components for the logo, search bar, avatar and upload button
-- finalize coding and styling header components - logo, search bar w/avatar, and button w/avatar
-<<<<<<< HEAD
-=======
+- finalize coding and styling header components - logo, search bar w/avatar, and button w/avatar <<<<<<< HEAD =======
 - correct avatar img getting squished by sibling
->>>>>>> feature-create-header
+  > > > > > > > feature-create-header
+- addition of VideoPlayer component
+- renamed CurrentVideo component to MainVideo to adhere closer to implementation requirements
+- recreation of Avatar component and utilized in new CommentForm component
+- refinement of styling
+- create VideoStats component for use in the MainVideo, styling as required.
+- complete CommentForm coding and styling.
+- refine Header layout and component call.
+- Clean up SearchBar and Button components, removed Avatar inclusion in these components to keep separation of concerns
+- create MainVideo comment component to loop through comments prop and display accordingly.
+  > > > > feature-next-videos
+- create NextVideos component to loop through, and display, the array of next videos
+- complete functional programming of NextVideo component
+- complete integration of state and the logic to change which video is displayed in the MainVideo component
+- > > > feature-styling
+- begin styling the app for tablet breakpoints
+- component styling for breakpoints. SearchBar, vidoePlayer, title, VideoStats, VideoBlurb and CommentForm complete
+- complete all component styling across all breakpoints
+- final commit before merging to main

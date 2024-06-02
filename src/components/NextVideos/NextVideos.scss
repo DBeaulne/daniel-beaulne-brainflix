@@ -1,0 +1,31 @@
+/* VideoComment component styling */
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.nextVideo {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding-bottom: 1rem;
+	height: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+
+	@include mixin.desktop {
+		padding-top: 2.25rem;
+		padding-left: 1.5rem;
+		padding-right: 7.5rem;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: global.$Silver;
+		padding-bottom: 1rem;
+
+		@include mixin.tablet {
+			padding-bottom: 1.5rem;
+			@include global.tablet-subheader;
+		}
+	}
+}

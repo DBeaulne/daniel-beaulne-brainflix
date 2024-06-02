@@ -1,4 +1,4 @@
-/* header.scss */
+/* VideoPlayer component styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -36,54 +36,28 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-.header {
-  position: relative;
+/* VideoPlayer component styling */
+.videoPlayer {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  background-color: #000;
 }
 @media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-bottom: 1.5rem;
+  .videoPlayer {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
+  .videoPlayer {
+    padding-left: 11.5rem;
+    padding-right: 11.5rem;
   }
 }
-.header__searchBar-container {
-  display: flex;
-  flex-direction: row;
+.videoPlayer video {
   width: 100%;
-  align-items: center;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .header__searchBar-container {
-    justify-content: flex-end;
-    padding-bottom: unset;
-  }
-}
-.header__button-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .header__button-container {
-    max-width: 15rem;
-    justify-content: space-between;
-  }
-}/*# sourceMappingURL=Header.css.map */
+  height: auto;
+  aspect-ratio: 16/9;
+}/*# sourceMappingURL=VideoPlayer.css.map */

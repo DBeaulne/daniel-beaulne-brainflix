@@ -8,7 +8,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg, .button__avatar-img {
+.avatarImg {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -36,16 +36,6 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -55,7 +45,7 @@ solid @ 100% opacity, unless stated otherwise */
 /* Error Code colors */
 /* Media Breakpoints */
 /* Extensions */
-.avatarImg, .button__avatar-img {
+.avatarImg {
   display: flex;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -83,26 +73,15 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 .button {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .button {
-    justify-content: flex-end;
-    width: 30%;
+    max-width: 11rem;
   }
 }
 .button__btn {
@@ -114,44 +93,10 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 4px;
-  width: 100%;
-  background-image: url("../../assets/Icons/upload.svg");
   background-position: 0.75rem center;
   background-repeat: no-repeat;
+  width: 100%;
 }
 .button__btn:hover {
   background-color: #0065ad;
-}
-@media screen and (min-width: 768px) {
-  .button__btn {
-    width: 9.375rem;
-  }
-}
-.button__img-box {
-  display: flex;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: none;
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .button__img-box {
-    margin-left: 1rem;
-    display: flex;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .button__img-box {
-    margin-left: 2rem;
-  }
-}
-.button__avatar-img {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .button__avatar-img {
-    display: flex;
-  }
 }/*# sourceMappingURL=Button.css.map */

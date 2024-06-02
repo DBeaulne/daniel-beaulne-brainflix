@@ -4,16 +4,22 @@
 
 .logo {
 	display: flex;
-	padding-top: 1rem;
+	// padding-top: 1rem;
 	padding-bottom: 1rem;
 	width: 100%;
+	justify-content: center;
 
 	@include mixin.tablet {
-		// width: 30%;
+		width: 40%;
+		justify-content: flex-start;
+		padding-bottom: unset;
 	}
 
 	img {
-		width: 150px;
-		height: 25px;
+		width: 100%;
+		height: auto;
+		background-color: #fff;
+		max-height: 1.563rem;
+		max-width: 7.5rem;
 	}
 }

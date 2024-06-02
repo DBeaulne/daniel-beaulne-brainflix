@@ -36,25 +36,59 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-/* extensions */
-/* Initialization */
-* {
-  font-family: "Avenir-Next", "Times New Roman", Times, serif;
-}
-
-a {
-  text-decoration: none;
-}
-
+/* Index page styling*/
 /* Initialization */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #323232;
+  font-weight: 400;
+  font-family: "Avenir-Next", "Times New Roman", Times, serif;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
 }
 
 a {
   text-decoration: none;
+}
+
+h2 {
+  font-family: "Avenir-Next";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Avenir-Next";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+
+.mainVideo-container {
+  display: flex;
+  width: 100%;
+}
+
+.nextVideo-container {
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .nextVideo-container {
+    width: 60%;
+    border-left: 1px solid #e1e1e1;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .mainContent {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=App.css.map */

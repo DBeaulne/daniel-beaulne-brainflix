@@ -1,4 +1,4 @@
-/* header.scss */
+/* VideoStats component styling */
 /* Global site styling  */
 /* Colors */
 /* Used for typography, components, branding and are
@@ -36,54 +36,63 @@ solid @ 100% opacity, unless stated otherwise */
   font-weight: 700;
 }
 /* Mixins */
-.header {
-  position: relative;
+/* VideoStats component styling */
+.videoStats {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding-bottom: 1.5rem;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header {
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
-  }
-}
-.header__searchBar-container {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  align-items: center;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
-  .header__searchBar-container {
-    justify-content: flex-end;
+  .videoStats {
+    padding-top: unset;
     padding-bottom: unset;
   }
 }
-.header__button-container {
+@media screen and (min-width: 1280px) {
+  .videoStats {
+    padding-right: 1.5rem;
+  }
+}
+.videoStats__wrapper {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
-  .header__button-container {
-    max-width: 15rem;
-    justify-content: space-between;
+  .videoStats__wrapper {
+    flex-direction: row;
   }
-}/*# sourceMappingURL=Header.css.map */
+  .videoStats__wrapper--left {
+    justify-content: flex-start;
+  }
+  .videoStats__wrapper--right {
+    justify-content: flex-end;
+  }
+  .videoStats__wrapper p {
+    padding-left: 2.25rem;
+  }
+}
+.videoStats__wrapper p,
+.videoStats__wrapper h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.videoStats__wrapper p {
+  display: flex;
+  color: #afafaf;
+  font-family: "Avenir-Next";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  align-content: center;
+}
+.videoStats__wrapper h3 {
+  height: auto;
+  line-height: 1.375rem;
+}
+.videoStats img {
+  padding-right: 0.5rem;
+}/*# sourceMappingURL=VideoStats.css.map */
