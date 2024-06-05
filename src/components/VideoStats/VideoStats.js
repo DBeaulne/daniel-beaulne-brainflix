@@ -13,10 +13,10 @@ function VideoStats(stats) {
 				</div>
 				<div className="videoStats__wrapper videoStats__wrapper--right">
 					<p>
-						<img src={viewsIcon} /> {stats.stats.views}
+						<img src={viewsIcon} alt="" /> {stats.stats.views}
 					</p>
 					<p>
-						<img src={likesIcon} /> {stats.stats.likes}
+						<img src={likesIcon} alt="" /> {stats.stats.likes}
 					</p>
 				</div>
 			</div>
