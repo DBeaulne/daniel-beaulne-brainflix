@@ -17,7 +17,7 @@ function Header() {
 				<Avatar image={avatarImg} id="searchBar-avatar" />
 			</div>
 			<div className="header__button-container">
-				<Button text="upload" icon={buttonIcon} />
+				<Button text="upload" icon={buttonIcon} url="UploadPage" />
 				<Avatar image={avatarImg} id="button-avatar" />
 			</div>
 		</div>

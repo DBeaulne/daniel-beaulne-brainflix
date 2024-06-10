@@ -1,0 +1,132 @@
+/* Component Upload.scss */
+@use "../../styles//partials/global";
+@use "../../styles/partials/mixin";
+
+.upload-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid global.$Mercury;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+
+	@include mixin.tablet {
+		padding-left: 2.25rem;
+		padding-right: 2.25rem;
+	}
+
+	@include mixin.desktop {
+		height: 50vh;
+		padding-left: 7.5rem;
+		padding-right: 7.5rem;
+	}
+
+	&__title {
+		@include global.mobile-page-header;
+		font-weight: 700;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		@include mixin.tablet {
+			@include global.tablet-page-header;
+			padding-top: 2.25rem;
+			padding-bottom: 2.25rem;
+		}
+	}
+
+	&__container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+
+		@include mixin.tablet {
+			border-top: 1px solid global.$Mercury;
+			border-bottom: 1px solid global.$Mercury;
+		}
+	}
+
+	&__thumbnail {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		max-width: 100%;
+		border-radius: 4px;
+		background-color: global.$Mercury;
+	}
+
+	&__form-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input-field {
+		background-color: global.$Alabaster;
+		border: 1px solid global.$Mercury;
+		border-radius: 4px;
+		min-height: 2.25rem;
+		width: 100%;
+		min-width: 15rem;
+		padding: 1rem;
+		@include global.mobile-body-copy;
+
+		@include mixin.tablet {
+			min-height: 2.5rem;
+		}
+
+		&::placeholder {
+			color: global.$BrainFlix-Black;
+			text-align: left;
+		}
+
+		&:focus-visible {
+			outline-color: global.$BrainFlix-Blue;
+		}
+	}
+
+	&__img-container,
+	&__video-title,
+	&__video-description {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 1rem;
+	}
+
+	&__label {
+		@include global.tablet-label;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: global.$Silver;
+	}
+
+	&__btn-container {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	&__publish-btn {
+		display: flex;
+		width: 100%;
+	}
+
+	&__cancel {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		padding-top: 2.5rem;
+	}
+
+	&__cancel-btn {
+		background-color: unset;
+		border: none;
+		width: 100%;
+		height: 2.25rem;
+		text-transform: uppercase;
+		@include global.tablet-label;
+		font-weight: 400;
+		color: global.$BrainFlix-Blue;
+	}
+}

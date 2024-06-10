@@ -5,14 +5,14 @@ import MainVideo from "./components/MainVideo/MainVideo";
 import NextVideos from "./components/NextVideos/NextVideos";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
-import Upload from "./pages/Upload/Upload";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route index element={<Homepage />} />
-				<Route path="upload" element={<Upload />} />
+				<Route path="uploadpage" element={<UploadPage />} />
 			</Routes>
 		</BrowserRouter>
 	);

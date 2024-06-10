@@ -26,6 +26,9 @@ h3 {
 	@include global.mobile-subheader;
 	font-weight: 600;
 }
+textarea {
+	resize: none;
+}
 
 .mainVideo-container {
 	display: flex;

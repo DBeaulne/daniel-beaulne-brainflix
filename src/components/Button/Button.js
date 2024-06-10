@@ -1,17 +1,21 @@
 /** Button component */
 import "./Button.scss";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Button(props) {
+function Button({ text, icon, url }) {
+	const navigate = useNavigate();
+	function handleClick({ props }) {
+		console.log(url);
+		navigate(url);
+	}
+
 	return (
 		<>
 			<div className="button">
-				<Link to="/Upload">
-					<button className="button__btn" type="button" style={{ backgroundImage: `url(${props.icon})` }}>
-						{props.text}
-					</button>
-				</Link>
+				<button className="button__btn" type="button" onClick={handleClick} style={{ backgroundImage: `url(${icon})` }}>
+					{text}
+				</button>
 			</div>
 		</>
 	);
