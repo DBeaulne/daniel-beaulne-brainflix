@@ -1,17 +1,18 @@
 import "./NextVideos.scss";
-import React from "react";
+import { useState } from "react";
+import NextVideosData from "../../data/videos.json";
 import NextVideoCard from "../NextVideoCard/NextVideoCard";
 
-function NextVideos({ videos, currVideoID, onVideoSelect }) {
+function NextVideos({ currVideoID, onVideoSelect }) {
+	const [nextVideo, setNextVideo] = useState(NextVideosData);
+
 	return (
-		<>
-			<div className="nextVideo">
-				<h3 className="nextVideo__title">next videos</h3>
-				{videos.map((next) =>
-					currVideoID !== next.id ? <NextVideoCard next={next} key={next.id} select={onVideoSelect} /> : false
-				)}
-			</div>
-		</>
+		<div className="nextVideo">
+			<h3 className="nextVideo__title">next videos</h3>
+			{nextVideo.map((next) =>
+				currVideoID !== next.id ? <NextVideoCard next={next} key={next.id} select={onVideoSelect} /> : false
+			)}
+		</div>
 	);
 }
 export default NextVideos;

@@ -33,6 +33,11 @@ textarea {
 .mainVideo-container {
 	display: flex;
 	width: 100%;
+	flex-direction: column;
+
+	@include mixin.desktop {
+		flex-direction: row;
+	}
 }
 
 .nextVideo-container {
@@ -50,6 +55,6 @@ textarea {
 	flex-direction: column;
 
 	@include mixin.desktop {
-		flex-direction: row;
+		// flex-direction: row;
 	}
 }

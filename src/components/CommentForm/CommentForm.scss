@@ -10,6 +10,10 @@
 	align-items: flex-start;
 	border-bottom: 1px solid global.$Mercury;
 
+	@include mixin.tablet {
+		padding-bottom: 1.25rem;
+	}
+
 	&__title {
 		padding-bottom: 0.5rem;
 		h3 {
@@ -74,6 +78,7 @@
 		background-color: global.$Alabaster;
 		padding: 0.75rem;
 		min-width: 15rem;
+		height: 6rem;
 		@include global.mobile-body-copy;
 
 		&:active,
@@ -82,8 +87,17 @@
 			outline: 1px solid global.$BrainFlix-Blue;
 		}
 
+		&::placeholder {
+			color: global.$BrainFlix-Black;
+		}
+
+		&:focus-visible {
+			outline-color: global.$BrainFlix-Blue;
+		}
+
 		@include mixin.tablet {
-			padding: unset;
+			padding: 0.5rem 0.75rem;
+			height: 2.5rem;
 		}
 	}
 

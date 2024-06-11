@@ -8,15 +8,13 @@ function NextVideoCard({ next, select }) {
 	}
 
 	return (
-		<>
-			<div className="videoCard" onClick={handleClick}>
-				<img className="videoCard__image" src={next.image} alt=""></img>
-				<div className="videoCard__info">
-					<p className="videoCard__title">{next.title}</p>
-					<p className="videoCard__channel">{next.channel}</p>
-				</div>
+		<div className="videoCard" onClick={handleClick}>
+			<img className="videoCard__image" src={next.image} alt=""></img>
+			<div className="videoCard__info">
+				<p className="videoCard__title">{next.title}</p>
+				<p className="videoCard__channel">{next.channel}</p>
 			</div>
-		</>
+		</div>
 	);
 }
 export default NextVideoCard;

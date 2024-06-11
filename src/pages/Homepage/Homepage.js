@@ -4,12 +4,10 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import VideoData from "../../data/video-details.json";
-import NextVideosData from "../../data/videos.json";
 
 function Homepage() {
 	// Set initial states
 	const [mainVideo, setMainVideo] = useState(VideoData[0]);
-	const [nextVideo, setNextVideo] = useState(NextVideosData);
 
 	// function to handle the lifted state from NextVideo component
 	// when user clicks on the next video, we use the id of that video to find the corresponding index
@@ -21,14 +19,14 @@ function Homepage() {
 	return (
 		<>
 			<Header />
-			<VideoPlayer image={mainVideo.image} />
 			<main className="mainContent">
-				<div className="mainVideo-container">
+				<VideoPlayer image={mainVideo.image} />
+				<section className="mainVideo-container">
 					<MainVideo video={mainVideo} />
-				</div>
-				<div className="nextVideo-container">
-					<NextVideos videos={nextVideo} currVideoID={mainVideo.id} onVideoSelect={handleVideoSelect} />
-				</div>
+					<article className="nextVideo-container">
+						<NextVideos currVideoID={mainVideo.id} onVideoSelect={handleVideoSelect} />
+					</article>
+				</section>
 			</main>
 		</>
 	);
