@@ -13,15 +13,15 @@ function Homepage() {
 
 	useEffect(() => {
 		// Initiate axios method and initial video api call
-		const fetchInitialVideo = async () => {
+		const fetchVideo = async () => {
 			const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 			const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
 			const response = await axios.get(`${BaseURL}videos?api_key=${api_key}`);
 			console.log(response.data);
-			console.log(response.data[0]);
+			console.log(response.data[0].id);
 			setVideo(response.data[0]);
 		};
-		fetchInitialVideo();
+		fetchVideo().then((result) => console.log(video));
 	}, []);
 
 	// function to handle the lifted state from NextVideo component
