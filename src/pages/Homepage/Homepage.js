@@ -9,20 +9,52 @@ import VideoData from "../../data/video-details.json";
 function Homepage() {
 	// Set initial states
 	const [mainVideo, setMainVideo] = useState(VideoData[0]);
-	const [video, setVideo] = useState([]);
+	const [mainVideoTest, setMainVideoTest] = useState({});
+	const [videoId, setVideoId] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState("");
+	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
+	const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
 
 	useEffect(() => {
 		// Initiate axios method and initial video api call
-		const fetchVideo = async () => {
-			const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-			const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
-			const response = await axios.get(`${BaseURL}videos?api_key=${api_key}`);
-			console.log(response.data);
-			console.log(response.data[0].id);
-			setVideo(response.data[0]);
+		const fetchVideoID = async () => {
+			try {
+				setIsLoading(true);
+				const response = await axios.get(`${BaseURL}videos?api_key=${api_key}`);
+				console.log(response.data[0].id);
+				setVideoId(response.data[0].id);
+			} catch (err) {
+				setError(err.message);
+			} finally {
+				setIsLoading(false);
+			}
 		};
-		fetchVideo().then((result) => console.log(video));
+		fetchVideoID();
 	}, []);
+
+	/* 	if (videoId !== undefined || videoId !== null) {
+		useEffect(() => {
+			const fetchVideoDetails = async (videoId) => {
+				console.log(videoId);
+
+				if (videoId !== undefined) {
+					try {
+						setIsLoading(true);
+						const res = await axios.get(`${BaseURL}videos/${videoId}?api_key=${api_key}`);
+						console.log(typeof setMainVideoTest);
+						console.log(res);
+						setMainVideoTest(res.data);
+					} catch (err) {
+						setError(err.message);
+					} finally {
+						setIsLoading(false);
+					}
+				}
+			};
+			fetchVideoDetails();
+		}, [videoId]);
+	} */
 
 	// function to handle the lifted state from NextVideo component
 	// when user clicks on the next video, we use the id of that video to find the corresponding index
@@ -37,7 +69,7 @@ function Homepage() {
 			<main className="mainContent">
 				<VideoPlayer image={mainVideo.image} />
 				<section className="mainVideo-container">
-					<MainVideo video={mainVideo} other={video} />
+					<MainVideo video={mainVideo} />
 					<article className="nextVideo-container">
 						<NextVideos currVideoID={mainVideo.id} onVideoSelect={handleVideoSelect} />
 					</article>
