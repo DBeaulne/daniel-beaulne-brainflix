@@ -4,7 +4,7 @@ import Avatar from "../Avatar/Avatar";
 
 function VideoComment({ videoComments }) {
 	const comments = videoComments;
-	return comments.map((comment) => (
+	return comments?.map((comment) => (
 		<div className="videoComment" key={comment.id}>
 			<Avatar id="comment-avatar" />
 			<div className="videoComment__wrapper">

@@ -5,10 +5,10 @@ import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
 import buttonIcon from "../../assets/Icons/add_comment.svg";
 
-function CommentForm({ comments }) {
+function CommentForm({ video }) {
 	return (
 		<section className="commentForm" id="commentForm">
-			<h3 className="commentForm__title">{comments.length} Comments</h3>
+			{<h3 className="commentForm__title">{video?.comments?.length} Comments</h3>}
 			<div className="commentForm__form-container">
 				<div className="commentForm__avatar-container">
 					<Avatar image={avatarImg} id="commentForm-avatar" />

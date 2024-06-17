@@ -1,10 +1,10 @@
 import "./VideoPlayer.scss";
 import React from "react";
 
-function VideoPlayer(image) {
+function VideoPlayer({ video }) {
 	return (
 		<>
-			<video className="videoPlayer" controls poster={image.image}></video>
+			<video className="videoPlayer" controls poster={video.image}></video>
 		</>
 	);
 }
