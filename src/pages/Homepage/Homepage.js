@@ -9,17 +9,24 @@ import { withRouter } from "../../components/WithRouter/WithRouter";
 
 function Homepage() {
 	// Set initial states
-	const [selectedVideo, setSelectedVideo] = useState({});
-	const [videoArray, setVideoArray] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState("");
-	const { id } = useParams;
-	const [videoId, setVideoId] = useState(id);
+	const [selectedVideo, setSelectedVideo] = useState({}); // state to hold the details of the selected video
+	const [videoArray, setVideoArray] = useState([]); // state to hold the entireity of the video list
+	const [isLoading, setIsLoading] = useState(false); // state to know if the page is loading
+	const [error, setError] = useState(""); // error message state
+	const { id } = useParams(); // params for the video id
+
+	// API consts
 	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 	const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
 
 	useEffect(() => {
-		// Initiate axios method and fetch initial video ID
+		// On initial mounting of app
+		// Initiate axios method and fetch video list
+
+		// this async function lives in this useEffect because I do not
+		// intend to use it anywhere else in the app
+		// update the setVideoArray state with the data retrieved from the get function
+
 		async function fetchInitialVideos() {
 			try {
 				setIsLoading(true);
@@ -35,35 +42,37 @@ function Homepage() {
 	}, []);
 
 	useEffect(() => {
-		// fetch video details
+		// Once video list is retrieved from the first useEffect, the videoArray state changes
+		// and triggers this useEffect to fetch the video details
+		// for the first video in the array using the fetchVideoDetails async function
+
 		if (videoArray[0]?.id && !id) {
 			fetchVideoDetails(videoArray[0]?.id);
 		}
 	}, [videoArray]);
 
 	useEffect(() => {
+		// if the params "id" changes, like when a user clicks on a video to watch next,
+		// then call the fetchVideoDetails async function, passing in the new id
+
 		if (id) {
 			fetchVideoDetails(id);
 		}
 	}, [id]);
 
+	// function that is used in multiple locations
+	// pass in the id of any video to fetch the details of that video
+	// and update the setSelectedVideo state
 	async function fetchVideoDetails(id) {
 		try {
 			const res = await axios.get(`${BaseURL}videos/${id}/?api_key=${api_key}`);
-			console.log(res?.data);
+			// console.log(res?.data);
 			setSelectedVideo(res?.data);
 		} catch (err) {
 			setError(err.message);
 		}
 	}
 
-	// function to handle the lifted state from NextVideo component
-	// when user clicks on the next video, we use the id of that video to find the corresponding index
-	// and then setVideo to that index #
-	function handleVideoSelect(videoID) {
-		/* 		const selectedVideoNum = VideoData.findIndex((arr) => arr.id === videoID);
-		setVideo(VideoData[selectedVideoNum]); */
-	}
 	return (
 		<>
 			<Header />

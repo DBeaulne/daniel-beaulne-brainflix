@@ -11,7 +11,7 @@ function App() {
 			<Routes>
 				<Route index element={<Homepage />} />
 				<Route path="/UploadPage" element={<UploadPage />} />
-				<Route path="/:id" element={<Homepage />} />
+				<Route path="/videos/:id" element={<Homepage />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>

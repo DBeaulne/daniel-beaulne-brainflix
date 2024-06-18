@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function NextVideoCard({ next }) {
 	return (
 		<>
-			<Link to={`/${next.id}`}>
+			<Link to={`/videos/${next.id}`}>
 				<div className="videoCard">
 					<img className="videoCard__image" src={next.image} alt=""></img>
 					<div className="videoCard__info">
