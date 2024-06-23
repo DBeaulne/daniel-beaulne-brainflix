@@ -49,7 +49,7 @@ function Homepage() {
 		if (videoArray[0]?.id && !id) {
 			fetchVideoDetails(videoArray[0]?.id);
 		}
-	}, [videoArray]);
+	}, [videoArray, id]);
 
 	useEffect(() => {
 		// if the params "id" changes, like when a user clicks on a video to watch next,
