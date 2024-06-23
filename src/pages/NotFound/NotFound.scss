@@ -1,0 +1,39 @@
+// NotFoundPage styling
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.pageError {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	align-items: center;
+	padding: 1rem;
+
+	&__text {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__btn-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		padding-top: 1rem;
+
+		@include mixin.tablet {
+			max-width: 15rem;
+			padding-top: 1.5rem;
+		}
+
+		a {
+			width: 100%;
+
+			@include mixin.tablet {
+				//width: unset;
+				max-width: 15rem;
+			}
+		}
+	}
+}

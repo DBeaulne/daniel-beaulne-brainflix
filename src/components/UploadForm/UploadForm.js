@@ -3,8 +3,13 @@ import Thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import React from "react";
 import Button from "../../components/Button/Button";
 import buttonIcon from "../../assets/Icons/publish.svg";
+import { useLocation } from "react-router-dom";
 
 function UploadForm() {
+	const location = useLocation();
+	// determine if the current location is already the upload page
+	const isUploadPage = location.pathname === "/UploadPage";
+
 	// Function to handle the cancel click event
 	// a function that in the future will clear all of the upload form fields
 	function handleCancel(e) {
@@ -48,9 +53,7 @@ function UploadForm() {
 				</form>
 			</div>
 			<div className="upload-form__btn-container">
-				<div className="upload-form__publish-btn">
-					<Button text="publish" icon={buttonIcon} url="/" />
-				</div>
+				<div className="upload-form__publish-btn">{<Button text="publish" icon={buttonIcon} to="/" />}</div>
 				<div className="upload-form__cancel">
 					<button className="upload-form__cancel-btn" type="button" onClick={handleCancel}>
 						Cancel

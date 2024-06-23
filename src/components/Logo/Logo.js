@@ -2,12 +2,14 @@
 import "./Logo.scss";
 import React from "react";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function Logo() {
+function Logo({ to }) {
+	const location = useLocation();
+
 	return (
 		<div className="logo">
-			<Link to="/">
+			<Link to={to}>
 				<img src={logo} alt="BrainFlix Logo" />
 			</Link>
 		</div>

@@ -7,22 +7,22 @@ import Button from "../Button/Button";
 import buttonIcon from "../../assets/Icons/upload.svg";
 import Avatar from "../Avatar/Avatar";
 import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Header() {
 	const location = useLocation();
 	// determine if the current location is already the upload page
-	const isUploadPage = location.pathname === "/Upload";
+	const isUploadPage = location.pathname === "/UploadPage";
 
 	return (
 		<div className="header">
-			<Logo />
+			{<Logo to="/" />}
 			<div className="header__searchBar-container">
 				<SearchBar />
 				<Avatar image={avatarImg} id="searchBar-avatar" />
 			</div>
 			<div className="header__button-container">
-				{!isUploadPage && <Button text="upload" icon={buttonIcon} to="/UploadPage" />}
+				{<Button text="upload" icon={buttonIcon} to="/UploadPage" />}
 				<Avatar image={avatarImg} id="button-avatar" />
 			</div>
 		</div>
