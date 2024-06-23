@@ -11,8 +11,6 @@ import { useLocation } from "react-router-dom";
 
 function Header() {
 	const location = useLocation();
-	// determine if the current location is already the upload page
-	const isUploadPage = location.pathname === "/UploadPage";
 
 	return (
 		<div className="header">

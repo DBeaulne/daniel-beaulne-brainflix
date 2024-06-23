@@ -1,15 +1,10 @@
 import "./UploadForm.scss";
 import Thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import React from "react";
-import Button from "../../components/Button/Button";
+import Button from "../Button/Button";
 import buttonIcon from "../../assets/Icons/publish.svg";
-import { useLocation } from "react-router-dom";
 
 function UploadForm() {
-	const location = useLocation();
-	// determine if the current location is already the upload page
-	const isUploadPage = location.pathname === "/UploadPage";
-
 	// Function to handle the cancel click event
 	// a function that in the future will clear all of the upload form fields
 	function handleCancel(e) {
