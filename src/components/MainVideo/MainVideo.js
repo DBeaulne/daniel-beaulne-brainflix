@@ -15,9 +15,9 @@ function MainVideo({ video }) {
 	return (
 		<section className="mainVideo">
 			<div className="mainVideo__content-box">
-				<h2 className="mainVideo__video-title">{video.title}</h2>
+				<h2 className="mainVideo__video-title">{video?.title}</h2>
 				{<VideoStats stats={stats} />}
-				<p className="mainVideo__video-blurb">{video.description}</p>
+				<p className="mainVideo__video-blurb">{video?.description}</p>
 				{<CommentForm video={video} />}
 				{<VideoComment videoComments={video?.comments} />}
 			</div>
