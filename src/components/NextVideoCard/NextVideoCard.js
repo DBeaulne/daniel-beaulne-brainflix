@@ -1,21 +1,19 @@
 import "./NextVideoCard.scss";
 import React from "react";
+import { Link } from "react-router-dom";
 
-function NextVideoCard({ next, select }) {
-	function handleClick(e) {
-		e.preventDefault();
-		select(next.id);
-	}
-
+function NextVideoCard({ next }) {
 	return (
 		<>
-			<div className="videoCard" onClick={handleClick}>
-				<img className="videoCard__image" src={next.image} alt=""></img>
-				<div className="videoCard__info">
-					<p className="videoCard__title">{next.title}</p>
-					<p className="videoCard__channel">{next.channel}</p>
+			<Link to={`/videos/${next.id}`}>
+				<div className="videoCard">
+					<img className="videoCard__image" src={next.image} alt=""></img>
+					<div className="videoCard__info">
+						<p className="videoCard__title">{next.title}</p>
+						<p className="videoCard__channel">{next.channel}</p>
+					</div>
 				</div>
-			</div>
+			</Link>
 		</>
 	);
 }

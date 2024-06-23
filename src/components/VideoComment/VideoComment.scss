@@ -10,6 +10,11 @@
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 
+	@include mixin.tablet {
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
+	}
+
 	&__wrapper {
 		display: flex;
 		width: 100%;

@@ -33,3 +33,7 @@
 - component styling for breakpoints. SearchBar, vidoePlayer, title, VideoStats, VideoBlurb and CommentForm complete
 - complete all component styling across all breakpoints
 - final commit before merging to main
+  > > >
+- Sprint 2 start
+- install react-router-dom, axios, and sass as required
+- correct VideoStats.js code warning for <img> tag not having alt attribute
