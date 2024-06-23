@@ -1,7 +1,7 @@
 import "./NotFound.scss";
 import Header from "../../components/Header/Header";
 import Button from "../../components/Button/Button";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function NotFound() {
 	const location = useLocation();
