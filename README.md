@@ -36,4 +36,12 @@
   > > >
 - Sprint 2 start
 - install react-router-dom, axios, and sass as required
-- correct VideoStats.js code warning for <img> tag not having alt attribute
+- correct VideoStats.js code warning for img tag not having alt attribute
+- correct feedback noted from Sprint 1
+- test and implement api routes
+- code and debug useEffects for mount, videoDetails, and id changes
+- code and style upload page
+- debug next video selection
+- implement sprint 1 deep dive for date conversion
+- final commit before submission
+  > > >
