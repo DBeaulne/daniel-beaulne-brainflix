@@ -16,7 +16,7 @@ function UploadForm() {
 			<h2 className="upload-form__title">Upload Video</h2>
 			<div className="upload-form__container">
 				<div className="upload-form__img-container">
-					<label className="upload-form__label">video thumbnail</label>
+					<p className="upload-form__label">video thumbnail</p>
 					<img className="upload-form__thumbnail" src={Thumbnail} alt="" />
 				</div>
 				<form className="upload-form__form">

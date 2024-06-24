@@ -5,7 +5,6 @@ import Avatar from "../Avatar/Avatar";
 function VideoComment({ videoComments }) {
 	const comments = videoComments;
 
-	const currentDate = new Date();
 	const millisecondMinutes = 60000;
 	const millisecondHours = 60 * millisecondMinutes;
 	const millisecondDays = 24 * millisecondHours;
@@ -13,6 +12,7 @@ function VideoComment({ videoComments }) {
 	const millisecondYears = 12 * millisecondMonths;
 
 	function ConvertDate(date) {
+		const currentDate = new Date();
 		const timeDateDifferential = currentDate - date;
 		if (timeDateDifferential < millisecondMinutes) {
 			return "Less than a minute ago";
