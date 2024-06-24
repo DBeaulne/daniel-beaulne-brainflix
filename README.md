@@ -34,7 +34,9 @@
 - complete all component styling across all breakpoints
 - final commit before merging to main
   > > >
-- Sprint 2 start
+
+## Sprint 2 start
+
 - install react-router-dom, axios, and sass as required
 - correct VideoStats.js code warning for img tag not having alt attribute
 - correct feedback noted from Sprint 1
@@ -45,3 +47,10 @@
 - implement sprint 1 deep dive for date conversion
 - final commit before submission
   > > >
+
+## Sprint 3 start
+
+- implement code that was missed in Sprint 2
+- implement modal window for upload notification and re-direct to home page
+- implement code to clear out upload form field on cancel
+- split converDate function from VideoComment and placed it in a new src/utils directory
