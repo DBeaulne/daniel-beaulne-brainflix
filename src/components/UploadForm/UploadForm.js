@@ -20,7 +20,6 @@ function UploadForm() {
 	};
 
 	// Function to handle the cancel click event
-	// a function that in the future will clear all of the upload form fields
 	function handleCancel(e) {
 		e.preventDefault();
 		setVideoTitle("");
