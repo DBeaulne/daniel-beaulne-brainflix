@@ -9,8 +9,14 @@ import buttonIcon from "../../assets/Icons/add_comment.svg";
 function CommentForm({ video }) {
 	// states for the form
 	const [comment, setComment] = useState("");
-	const [submitComment, setSubmitComment] = useState("");
+	const [submitComment, setSubmitComment] = useState({});
 	const [error, setError] = useState(""); // error message state
+
+	// Comment class declaration
+	const Comment = function (username, comment) {
+		this.name = username;
+		this.comment = comment;
+	};
 
 	// API consts
 	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
@@ -23,30 +29,27 @@ function CommentForm({ video }) {
 		// clear the comment state with setComment("")
 		e.preventDefault();
 		if (!comment) return;
-		setSubmitComment(comment);
+		const newComment = new Comment("Daniel Beaulne", comment);
+		console.log(newComment);
+		setSubmitComment(newComment);
+
+		useEffect(() => {
+			// api call to post the comment
+			// if comment is empty or if comment is identical then do not post
+
+			async function postComment() {
+				try {
+					console.log(`${BaseURL}videos/${video.id}?api_key=${api_key}`, submitComment);
+					// const res = await axios.post(`${BaseURL}videos/${video.id}/comments?api_key=${api_key}`, submitComment);
+				} catch (err) {
+					setError(err.message);
+				}
+			}
+			postComment();
+		}, []);
+
 		setComment("");
 	};
-
-	useEffect(() => {
-		// api call to post the comment
-		// if comment is empty or if comment is identical then do not post
-
-		async function postComment() {
-			console.log(submitComment);
-
-			if (!submitComment) return;
-			try {
-				console.log(video.id);
-				console.log(submitComment);
-				console.log(`${BaseURL}videos/${video.id}/${submitComment}/?api_key=${api_key}`);
-
-				const res = await axios.post(`${BaseURL}videos/${video.id}/comments?api_key=${api_key}`, submitComment);
-			} catch (err) {
-				setError(err.message);
-			}
-		}
-		postComment();
-	}, [submitComment]);
 
 	return (
 		<section className="commentForm" id="commentForm">
