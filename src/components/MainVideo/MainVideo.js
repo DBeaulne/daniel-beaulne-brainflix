@@ -4,7 +4,7 @@ import CommentForm from "../CommentForm/CommentForm";
 import VideoStats from "../VideoStats/VideoStats";
 import VideoComment from "../VideoComment/VideoComment";
 
-function MainVideo({ video }) {
+function MainVideo({ video, handleCommentUpdate }) {
 	const stats = {
 		likes: video.likes,
 		views: video.views,
@@ -18,7 +18,7 @@ function MainVideo({ video }) {
 				<h2 className="mainVideo__video-title">{video?.title}</h2>
 				{<VideoStats stats={stats} />}
 				<p className="mainVideo__video-blurb">{video?.description}</p>
-				{<CommentForm video={video} />}
+				{<CommentForm video={video} handleCommentUpdate={handleCommentUpdate} />}
 				{<VideoComment videoComments={video?.comments} />}
 			</div>
 		</section>

@@ -11,6 +11,7 @@ function Homepage() {
 	// Set initial states
 	const [selectedVideo, setSelectedVideo] = useState({}); // state to hold the details of the selected video
 	const [videoArray, setVideoArray] = useState([]); // state to hold the entireity of the video list
+	const [submitComment, setSubmitComment] = useState(); // comment form state
 	const [isLoading, setIsLoading] = useState(false); // state to know if the page is loading
 	const [error, setError] = useState(""); // error message state
 	const { id } = useParams(); // params for the video id
@@ -58,7 +59,7 @@ function Homepage() {
 		if (id) {
 			fetchVideoDetails(id);
 		}
-	}, [id]);
+	}, [id, submitComment]);
 
 	// function that is used in multiple locations
 	// pass in the id of any video to fetch the details of that video
@@ -79,9 +80,9 @@ function Homepage() {
 			<main className="mainContent">
 				<VideoPlayer video={selectedVideo} />
 				<section className="mainVideo-container">
-					<MainVideo video={selectedVideo} />
+					<MainVideo video={selectedVideo} handleCommentUpdate={fetchVideoDetails} />
 					<article className="nextVideo-container">
-						{<NextVideos currVideoID={selectedVideo.id} videoArray={setVideoArray} />}
+						{<NextVideos currVideoID={selectedVideo.id} videoArray={videoArray} />}
 					</article>
 				</section>
 			</main>

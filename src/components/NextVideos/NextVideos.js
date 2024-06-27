@@ -1,10 +1,8 @@
 import "./NextVideos.scss";
-import { useState } from "react";
-import NextVideosData from "../../data/videos.json";
 import NextVideoCard from "../NextVideoCard/NextVideoCard";
 
-function NextVideos({ currVideoID, onVideoSelect }) {
-	const [nextVideo, setNextVideo] = useState(NextVideosData);
+function NextVideos({ currVideoID, videoArray }) {
+	const nextVideo = videoArray;
 
 	return (
 		<div className="nextVideo">
