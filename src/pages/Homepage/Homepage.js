@@ -30,9 +30,9 @@ function Homepage() {
 
 		async function fetchInitialVideos() {
 			try {
-				setIsLoading(true);
-				const response = await axios.get(`${BaseURL}videos?api_key=${api_key}`);
-				setVideoArray(response?.data);
+				const response = await axios
+					.get(`${BaseURL}videos?api_key=${api_key}`)
+					.then((response) => setVideoArray(response?.data));
 			} catch (err) {
 				setError(err.message);
 			} finally {
@@ -82,7 +82,7 @@ function Homepage() {
 				<section className="mainVideo-container">
 					<MainVideo video={selectedVideo} handleCommentUpdate={fetchVideoDetails} />
 					<article className="nextVideo-container">
-						{<NextVideos currVideoID={selectedVideo.id} videoArray={videoArray} />}
+						{<NextVideos currVideoID={selectedVideo?.id} videoArray={videoArray} />}
 					</article>
 				</section>
 			</main>
