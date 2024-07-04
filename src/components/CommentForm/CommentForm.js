@@ -24,7 +24,7 @@ function CommentForm({ video, handleCommentUpdate }) {
 	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
 	const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
 
-	const handleCommentSubmit = (e) => {
+	const handleCommentSubmit = async (e) => {
 		// on comment submit
 		// preventDefault re-render
 		// setSubmitComment to the value in the comment state
@@ -75,7 +75,8 @@ function CommentForm({ video, handleCommentUpdate }) {
 								rows="1"
 								placeholder="Add a new comment"
 								value={comment}
-								onChange={(e) => setComment(e.target.value)}></textarea>
+								onChange={(e) => setComment(e.target.value)}
+							/>
 						</div>
 					</form>
 					<div className="commentForm__btn-container" onClick={handleCommentSubmit}>
