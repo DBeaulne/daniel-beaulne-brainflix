@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Header from "../../components/Header/Header";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import MainVideo from "../../components/MainVideo/MainVideo";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import { useParams } from "react-router-dom";
 import { withRouter } from "../../components/WithRouter/WithRouter";
+import { getVideos, getVideoDetails } from "../../api";
 
 function Homepage() {
 	// Set initial states
 	const [selectedVideo, setSelectedVideo] = useState({}); // state to hold the details of the selected video
 	const [videoArray, setVideoArray] = useState([]); // state to hold the entireity of the video list
-	const [submitComment, setSubmitComment] = useState(); // comment form state
+	// const [submitComment, setSubmitComment] = useState(null); // comment form state
 	const [isLoading, setIsLoading] = useState(false); // state to know if the page is loading
 	const [error, setError] = useState(""); // error message state
 	const { id } = useParams(); // params for the video id
-
-	// API consts
-	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-	const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
 
 	useEffect(() => {
 		// On initial mounting of app
@@ -28,17 +24,18 @@ function Homepage() {
 		// intend to use it anywhere else in the app
 		// update the setVideoArray state with the data retrieved from the get function
 
-		async function fetchInitialVideos() {
+		const fetchInitialVideos = async () => {
 			try {
-				const response = await axios
-					.get(`${BaseURL}videos?api_key=${api_key}`)
-					.then((response) => setVideoArray(response?.data));
+				setIsLoading(true);
+				const videos = await getVideos();
+				setVideoArray(videos);
 			} catch (err) {
-				setError(err.message);
+				setError("Failed to fetch videos");
+				console.error("Error fetching videos:", err);
 			} finally {
 				setIsLoading(false);
 			}
-		}
+		};
 		fetchInitialVideos();
 	}, []);
 
@@ -48,7 +45,7 @@ function Homepage() {
 		// for the first video in the array using the fetchVideoDetails async function
 
 		if (videoArray[0]?.id && !id) {
-			fetchVideoDetails(videoArray[0]?.id);
+			fetchVideoDetailsById(videoArray[0]?.id);
 		}
 	}, [videoArray, id]);
 
@@ -57,21 +54,29 @@ function Homepage() {
 		// then call the fetchVideoDetails async function, passing in the new id
 
 		if (id) {
-			fetchVideoDetails(id);
+			fetchVideoDetailsById(id);
 		}
-	}, [id, submitComment]);
+	}, [id]);
 
 	// function that is used in multiple locations
 	// pass in the id of any video to fetch the details of that video
 	// and update the setSelectedVideo state
-	async function fetchVideoDetails(id) {
+	const fetchVideoDetailsById = async (videoId) => {
 		try {
-			const res = await axios.get(`${BaseURL}videos/${id}/?api_key=${api_key}`);
-			// console.log(res?.data);
-			setSelectedVideo(res?.data);
+			const videoDetails = await getVideoDetails(videoId);
+			setSelectedVideo(videoDetails);
 		} catch (err) {
-			setError(err.message);
+			setError("Failed to fetch video details");
+			console.error(`Error fetching video details for ID ${videoId}`);
 		}
+	};
+
+	if (isLoading) {
+		return <div>Loading...</div>;
+	}
+
+	if (error) {
+		return <div>{error}</div>;
 	}
 
 	return (
@@ -80,7 +85,7 @@ function Homepage() {
 			<main className="mainContent">
 				<VideoPlayer video={selectedVideo} />
 				<section className="mainVideo-container">
-					<MainVideo video={selectedVideo} handleCommentUpdate={fetchVideoDetails} />
+					<MainVideo video={selectedVideo} handleCommentUpdate={fetchVideoDetailsById} />
 					<article className="nextVideo-container">
 						{<NextVideos currVideoID={selectedVideo?.id} videoArray={videoArray} />}
 					</article>

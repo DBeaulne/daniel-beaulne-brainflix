@@ -1,27 +1,48 @@
 import "./MainVideo.scss";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import CommentForm from "../CommentForm/CommentForm";
 import VideoStats from "../VideoStats/VideoStats";
 import VideoComment from "../VideoComment/VideoComment";
+import { submitComment, getVideoDetails } from "../../api";
 
 function MainVideo({ video, handleCommentUpdate }) {
-	const stats = {
-		likes: video.likes,
-		views: video.views,
-		channel: video.channel,
-		timestamp: video.timestamp
+	const [comments, setComments] = useState(video.comments || []);
+	const [error, setError] = useState("");
+
+	useEffect(() => {
+		setComments(video.comments || []);
+	}, [video]);
+
+	const addComment = async (comment) => {
+		try {
+			await submitComment(video.id, comment);
+			const updatedVideo = await getVideoDetails(video.id);
+			setComments(updatedVideo.comments || []);
+			handleCommentUpdate(video.id);
+		} catch (err) {
+			setError("Failed to submit comment");
+			console.error("Error submitting comment: ", err);
+		}
 	};
 
 	return (
-		<section className="mainVideo">
-			<div className="mainVideo__content-box">
-				<h2 className="mainVideo__video-title">{video?.title}</h2>
-				{<VideoStats stats={stats} />}
-				<p className="mainVideo__video-blurb">{video?.description}</p>
-				{<CommentForm video={video} handleCommentUpdate={handleCommentUpdate} />}
-				{<VideoComment videoComments={video?.comments} />}
-			</div>
-		</section>
+		<>
+			{video ? (
+				<section className="mainVideo">
+					<div className="mainVideo__content-box">
+						<h2 className="mainVideo__video-title">{video?.title}</h2>
+						{<VideoStats video={video} />}
+						<p className="mainVideo__video-blurb">{video?.description}</p>
+						{<CommentForm videoId={video.id} addComment={addComment} />}
+						{<VideoComment videoComments={video?.comments} />}
+					</div>
+				</section>
+			) : (
+				<div>Loading...</div>
+			)}
+		</>
 	);
 }
+
 export default MainVideo;

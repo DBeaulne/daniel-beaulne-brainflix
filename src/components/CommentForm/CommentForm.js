@@ -53,7 +53,7 @@ function CommentForm({ video, handleCommentUpdate }) {
 			}
 		}
 		postComment();
-	}, [submitComment, video.id]);
+	}, [submitComment, video?.id]);
 
 	return (
 		<section className="commentForm" id="commentForm">

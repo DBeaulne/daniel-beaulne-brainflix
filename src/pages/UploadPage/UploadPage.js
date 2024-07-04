@@ -6,7 +6,9 @@ function UploadPage() {
 	return (
 		<>
 			<Header />
-			<UploadForm />
+			<main className="upload-page">
+				<UploadForm />
+			</main>
 		</>
 	);
 }
