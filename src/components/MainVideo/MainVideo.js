@@ -11,15 +11,15 @@ function MainVideo({ video, handleCommentUpdate }) {
 	const [error, setError] = useState("");
 
 	useEffect(() => {
-		setComments(video.comments || []);
+		setComments(video?.comments || []);
 	}, [video]);
 
 	const addComment = async (comment) => {
 		try {
 			await submitComment(video.id, comment);
-			const updatedVideo = await getVideoDetails(video.id);
-			setComments(updatedVideo.comments || []);
-			handleCommentUpdate(video.id);
+			const updatedVideo = await getVideoDetails(video.id); // Get updated video details
+			setComments(updatedVideo.comments || []); // update comments with new comment data
+			handleCommentUpdate(video.id); // Refresh video details
 		} catch (err) {
 			setError("Failed to submit comment");
 			console.error("Error submitting comment: ", err);

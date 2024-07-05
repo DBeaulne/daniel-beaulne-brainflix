@@ -6,7 +6,7 @@ import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
 import buttonIcon from "../../assets/Icons/add_comment.svg";
 
-function CommentForm({ video, handleCommentUpdate }) {
+function CommentForm({ videoId, addComment }) {
 	// states for the form
 	const [comment, setComment] = useState("");
 	const [submitComment, setSubmitComment] = useState();
@@ -20,44 +20,20 @@ function CommentForm({ video, handleCommentUpdate }) {
 		}
 	}
 
-	// API consts
-	const BaseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
-	const api_key = "c8f0f939-78b7-47d9-91ab-5e01f5d85ccd";
-
 	const handleCommentSubmit = async (e) => {
 		// on comment submit
 		// preventDefault re-render
 		// setSubmitComment to the value in the comment state
 		// clear the comment state with setComment("")
 		e.preventDefault();
-		if (!comment) return;
 		const newComment = new Comment("Daniel Beaulne", comment);
-		setSubmitComment(newComment);
-
+		addComment(newComment);
 		setComment("");
 	};
 
-	useEffect(() => {
-		// api call to post the comment
-		// if comment is empty or if comment is identical then do not post
-
-		async function postComment() {
-			if (!submitComment) return;
-			try {
-				console.log(`${BaseURL}videos/${video.id}?api_key=${api_key}`, submitComment);
-				const res = await axios
-					.post(`${BaseURL}videos/${video.id}/comments?api_key=${api_key}`, submitComment)
-					.then(handleCommentUpdate);
-			} catch (err) {
-				setError(err.message);
-			}
-		}
-		postComment();
-	}, [submitComment, video?.id]);
-
 	return (
 		<section className="commentForm" id="commentForm">
-			{<h3 className="commentForm__title">{video?.comments?.length} Comments</h3>}
+			{<h3 className="commentForm__title">{videoId?.comments?.length} Comments</h3>}
 			<div className="commentForm__form-container">
 				<div className="commentForm__avatar-container">
 					<Avatar image={avatarImg} id="commentForm-avatar" />
@@ -76,6 +52,7 @@ function CommentForm({ video, handleCommentUpdate }) {
 								placeholder="Add a new comment"
 								value={comment}
 								onChange={(e) => setComment(e.target.value)}
+								required
 							/>
 						</div>
 					</form>
