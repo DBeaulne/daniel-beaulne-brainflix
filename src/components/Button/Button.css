@@ -99,4 +99,7 @@ solid @ 100% opacity, unless stated otherwise */
 }
 .button__btn:hover {
   background-color: #0065ad;
+}
+.button a {
+  width: 100%;
 }/*# sourceMappingURL=Button.css.map */

@@ -49,3 +49,13 @@ export const submitComment = async (videoId, comment) => {
 		throw error;
 	}
 };
+
+export const deleteComment = async (videoId, commentId) => {
+	try {
+		const response = await api.delete(`/videos/${videoId}/comments/${commentId}?api_key=${api_key}`);
+		return response.data;
+	} catch (error) {
+		console.error("Error deleting comment", error);
+		throw error;
+	}
+};

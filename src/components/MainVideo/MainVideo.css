@@ -38,7 +38,6 @@ solid @ 100% opacity, unless stated otherwise */
 /* Mixins */
 /* MainVideo component styling */
 .mainVideo {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;

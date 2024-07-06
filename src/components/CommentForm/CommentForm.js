@@ -1,6 +1,5 @@
 import "./CommentForm.scss";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import Avatar from "../Avatar/Avatar";
 import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
 import Button from "../Button/Button";
@@ -9,8 +8,6 @@ import buttonIcon from "../../assets/Icons/add_comment.svg";
 function CommentForm({ videoId, addComment }) {
 	// states for the form
 	const [comment, setComment] = useState("");
-	const [submitComment, setSubmitComment] = useState();
-	const [error, setError] = useState(""); // error message state
 
 	// Comment class declaration
 	class Comment {

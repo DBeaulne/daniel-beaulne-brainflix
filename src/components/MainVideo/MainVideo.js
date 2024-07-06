@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import CommentForm from "../CommentForm/CommentForm";
 import VideoStats from "../VideoStats/VideoStats";
 import VideoComment from "../VideoComment/VideoComment";
-import { submitComment, getVideoDetails } from "../../api";
+import { submitComment, getVideoDetails, deleteComment } from "../../api";
 
 function MainVideo({ video, handleCommentUpdate }) {
 	const [comments, setComments] = useState(video.comments || []);
@@ -26,6 +26,17 @@ function MainVideo({ video, handleCommentUpdate }) {
 		}
 	};
 
+	const delComment = async (commentId) => {
+		try {
+			await deleteComment(video.id, commentId);
+			const updatedVideo = await getVideoDetails(video.id); // Get updated video details
+			handleCommentUpdate(video.id); // Refresh video details
+		} catch (err) {
+			setError("Failed to delete comment");
+			console.error("Error deleting comment: ", err);
+		}
+	};
+
 	return (
 		<>
 			{video ? (
@@ -35,7 +46,7 @@ function MainVideo({ video, handleCommentUpdate }) {
 						{<VideoStats video={video} />}
 						<p className="mainVideo__video-blurb">{video?.description}</p>
 						{<CommentForm videoId={video.id} addComment={addComment} />}
-						{<VideoComment videoComments={video?.comments} />}
+						{<VideoComment videoComments={video?.comments} delComment={delComment} />}
 					</div>
 				</section>
 			) : (
