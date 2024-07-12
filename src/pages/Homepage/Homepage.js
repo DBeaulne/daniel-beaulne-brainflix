@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../components/Header/Header";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import MainVideo from "../../components/MainVideo/MainVideo";
-import NextVideos from "../../components/NextVideos/NextVideos";
-import { useParams } from "react-router-dom";
-import { withRouter } from "../../components/WithRouter/WithRouter";
-import { getVideos, getVideoDetails } from "../../api";
+import React, { useState, useEffect } from 'react';
+import Header from '../../components/Header/Header';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import MainVideo from '../../components/MainVideo/MainVideo';
+import NextVideos from '../../components/NextVideos/NextVideos';
+import { useParams } from 'react-router-dom';
+import { withRouter } from '../../components/WithRouter/WithRouter';
+import { getVideos, getVideoDetails } from '../../api';
 
 function Homepage() {
 	// Set initial states
@@ -13,7 +13,7 @@ function Homepage() {
 	const [videoArray, setVideoArray] = useState([]); // state to hold the entireity of the video list
 	// const [submitComment, setSubmitComment] = useState(null); // comment form state
 	const [isLoading, setIsLoading] = useState(false); // state to know if the page is loading
-	const [error, setError] = useState(""); // error message state
+	const [error, setError] = useState(''); // error message state
 	const { id } = useParams(); // params for the video id
 
 	useEffect(() => {
@@ -30,8 +30,8 @@ function Homepage() {
 				const videos = await getVideos();
 				setVideoArray(videos);
 			} catch (err) {
-				setError("Failed to fetch videos");
-				console.error("Error fetching videos:", err);
+				setError('Failed to fetch videos');
+				console.error('Error fetching videos:', err);
 			} finally {
 				setIsLoading(false);
 			}
@@ -64,9 +64,11 @@ function Homepage() {
 	const fetchVideoDetailsById = async (videoId) => {
 		try {
 			const videoDetails = await getVideoDetails(videoId);
+			console.log(videoDetails);
+
 			setSelectedVideo(videoDetails);
 		} catch (err) {
-			setError("Failed to fetch video details");
+			setError('Failed to fetch video details');
 			console.error(`Error fetching video details for ID ${videoId}`);
 		}
 	};
