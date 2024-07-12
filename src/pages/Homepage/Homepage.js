@@ -64,8 +64,6 @@ function Homepage() {
 	const fetchVideoDetailsById = async (videoId) => {
 		try {
 			const videoDetails = await getVideoDetails(videoId);
-			console.log(videoDetails);
-
 			setSelectedVideo(videoDetails);
 		} catch (err) {
 			setError('Failed to fetch video details');

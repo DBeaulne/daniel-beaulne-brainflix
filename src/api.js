@@ -22,7 +22,6 @@ export const getVideos = async () => {
 export const getVideoDetails = async (id) => {
 	try {
 		const response = await api.get(`/videos/${id}`);
-		console.log(response.data);
 		return response.data;
 	} catch (error) {
 		console.error(`Error fetching video details for ID ${id}:`, error);

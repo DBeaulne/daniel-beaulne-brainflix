@@ -7,7 +7,10 @@ function NextVideoCard({ next }) {
 		<>
 			<Link to={`/videos/${next.id}`}>
 				<div className="videoCard">
-					<img className="videoCard__image" src={next.image} alt={`thumbnail of ${next.title}`}></img>
+					<img
+						className="videoCard__image"
+						src={`${process.env.REACT_APP_BACKEND_URL}/images/${next.image}`}
+						alt={`thumbnail of ${next.title}`}></img>
 					<div className="videoCard__info">
 						<p className="videoCard__title">{next.title}</p>
 						<p className="videoCard__channel">{next.channel}</p>
