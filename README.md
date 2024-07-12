@@ -62,4 +62,4 @@
 - debug code for posting videos
 - completed basic requirements of the sprint
 
-### feature/deepdive-post-comments
+### feature/sprint-2-feedback
