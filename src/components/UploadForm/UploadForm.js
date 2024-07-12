@@ -61,7 +61,7 @@ function UploadForm() {
 			<div className="upload-form__container">
 				<div className="upload-form__img-container">
 					<p className="upload-form__label">video thumbnail</p>
-					<img className="upload-form__thumbnail" src={Thumbnail} alt="" />
+					<img className="upload-form__thumbnail" src={Thumbnail} alt="poster of uploaded video" />
 				</div>
 				<form className="upload-form__form" ref={formRef}>
 					<div className="upload-form__form-container">

@@ -1,6 +1,6 @@
 /** Avatar styling*/
-@use "../../styles//partials/global";
-@use "../../styles/partials/mixin";
+@use '../../styles//partials/global';
+@use '../../styles/partials/mixin';
 
 .avatar {
 	flex: none;
@@ -9,7 +9,6 @@
 	width: 2.25rem;
 	height: 2.25rem;
 	border: none;
-	display: none;
 
 	@include mixin.tablet {
 		display: flex;
@@ -41,7 +40,3 @@
 #commentForm-avatar {
 	display: flex;
 }
-
-/* .comment-avatar {
-	display: flex;
-} */

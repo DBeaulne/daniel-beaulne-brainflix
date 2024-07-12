@@ -1,5 +1,5 @@
-import "./Icon.scss";
-import React from "react";
+import './Icon.scss';
+import React from 'react';
 
 function Icon({ icon, id }) {
 	return (

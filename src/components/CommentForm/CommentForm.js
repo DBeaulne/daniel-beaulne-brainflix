@@ -1,13 +1,19 @@
-import "./CommentForm.scss";
-import React, { useState } from "react";
-import Avatar from "../Avatar/Avatar";
-import avatarImg from "../../assets/Images/Mohan-muruge.jpg";
-import Button from "../Button/Button";
-import buttonIcon from "../../assets/Icons/add_comment.svg";
+import './CommentForm.scss';
+import React, { useState } from 'react';
+import Avatar from '../Avatar/Avatar';
+import avatarImg from '../../assets/Images/Mohan-muruge.jpg';
+import Button from '../Button/Button';
+import buttonIcon from '../../assets/Icons/add_comment.svg';
+
+// CommentForm component to handle the layout and functionality of the comment form
+// takes in props videoId, addComment()
+// the videoId is the id of the video currently displayed, which is passed down from the
+// selectedVideo state in Homepage.js
+// addComment prop passed in from MainVideo.js as is an async function used to submit a comment
 
 function CommentForm({ videoId, addComment }) {
 	// states for the form
-	const [comment, setComment] = useState("");
+	const [comment, setComment] = useState('');
 
 	// Comment class declaration
 	class Comment {
@@ -23,9 +29,9 @@ function CommentForm({ videoId, addComment }) {
 		// setSubmitComment to the value in the comment state
 		// clear the comment state with setComment("")
 		e.preventDefault();
-		const newComment = new Comment("Daniel Beaulne", comment);
+		const newComment = new Comment('Daniel Beaulne', comment);
 		addComment(newComment);
-		setComment("");
+		setComment('');
 	};
 
 	return (

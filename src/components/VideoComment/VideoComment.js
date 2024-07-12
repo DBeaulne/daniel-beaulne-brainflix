@@ -1,9 +1,9 @@
-import "./VideoComment.scss";
-import React, { useState } from "react";
-import Avatar from "../Avatar/Avatar";
-import { convertDate } from "../../utils/dateUtils";
-import Icon from "../Icon/Icon";
-import trashCan from "../../assets/Icons/icon-delete.svg";
+import './VideoComment.scss';
+import React, { useState } from 'react';
+import Avatar from '../Avatar/Avatar';
+import { convertDate } from '../../utils/dateUtils';
+import Icon from '../Icon/Icon';
+import trashCan from '../../assets/Icons/icon-delete.svg';
 
 function VideoComment({ videoComments, delComment }) {
 	const [commentId, setCommentId] = useState(null);

@@ -19,7 +19,6 @@ function Homepage() {
 	useEffect(() => {
 		// On initial mounting of app
 		// Initiate axios method and fetch video list
-
 		// this async function lives in this useEffect because I do not
 		// intend to use it anywhere else in the app
 		// update the setVideoArray state with the data retrieved from the get function
