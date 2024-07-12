@@ -54,3 +54,12 @@
 - implement modal window for upload notification and re-direct to home page
 - implement code to clear out upload form field on cancel
 - split converDate function from VideoComment and placed it in a new src/utils directory
+
+### feature/custom-api branch
+
+- edited code to implement the local api requirements of the sprint
+- integrated functionality for static file retrieval for poster images
+- debug code for posting videos
+- completed basic requirements of the sprint
+
+### feature/deepdive-post-comments

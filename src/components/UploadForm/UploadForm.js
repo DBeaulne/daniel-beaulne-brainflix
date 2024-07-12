@@ -1,49 +1,60 @@
-import "./UploadForm.scss";
-import Thumbnail from "../../assets/Images/Upload-video-preview.jpg";
-import React, { useState } from "react";
-import Modal from "../Modal/Modal";
-import Button from "../Button/Button";
-import buttonIcon from "../../assets/Icons/publish.svg";
-import { uploadVideo } from "../../api";
+import './UploadForm.scss';
+import Thumbnail from '../../assets/Images/Upload-video-preview.jpg';
+import React, { useState, useRef } from 'react';
+import Modal from '../Modal/Modal';
+import Button from '../Button/Button';
+import buttonIcon from '../../assets/Icons/publish.svg';
+import { uploadVideo } from '../../api';
+import { useNavigate } from 'react-router-dom';
 
 function UploadForm() {
-	const [title, setTitle] = useState("");
-	const [description, setDescription] = useState("");
-	const [file, setFile] = useState(null);
-	const [error, setErrot] = useState("");
-	const [success, setSuccess] = useState("");
-	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [title, setTitle] = useState(''); // state for upload vido title
+	const [description, setDescription] = useState(''); // state for upload video description
+	const [image, setImage] = useState('image9.jpg'); // state for upload video image. hard-coded image for now
+	const [error, setErrot] = useState(''); // error state to capture any errors thrown in try...catch statement
+	const [success, setSuccess] = useState(''); // success state. Future use state
+	const [isModalOpen, setIsModalOpen] = useState(false); // modal state to control display of modal window
+	const formRef = useRef();
+	const navigate = useNavigate();
+
+	const videoObject = function (title, description, image) {
+		this.title = title;
+		this.description = description;
+		this.image = image;
+	};
 
 	const handleUploadClick = async (e) => {
-		// future logic to handle the upload for sprint 3
+		// logic to handle create the uploadForm data to be sent to server
 		e.preventDefault();
-		const formData = new FormData();
-		formData.append("title", title);
-		formData.append("description", description);
-		formData.append("file", file);
+		const uploadFormData = new videoObject(title, description, image);
+
 		try {
-			await uploadVideo(formData);
-			setSuccess("Video uploaded successfully");
-			setTitle("");
-			setDescription("");
-			setFile(null);
-			setIsModalOpen(true);
+			await uploadVideo(uploadFormData).then((res) => handleHouseKeeping());
 		} catch (err) {
-			setErrot("Failed to upload video");
-			console.error("Error uploading video:", err);
+			setErrot('Failed to upload video');
+			console.error('Error uploading video:', err);
 		}
 	};
 
+	const handleHouseKeeping = () => {
+		setSuccess('Video uploaded successfully');
+		setTitle('');
+		setDescription('');
+		setImage(null);
+		setIsModalOpen(true);
+	};
+
 	const handleCloseModal = () => {
-		setIsModalOpen(false);
+		if (isModalOpen === true) setIsModalOpen(false);
+		navigate('/');
 	};
 
 	// Function to handle the cancel click event
-	function handleCancel(e) {
+	const handleCancel = (e) => {
 		e.preventDefault();
-		setTitle("");
-		setDescription("");
-	}
+		setTitle('');
+		setDescription('');
+	};
 	return (
 		<section className="upload-form">
 			<h2 className="upload-form__title">Upload Video</h2>
@@ -52,29 +63,31 @@ function UploadForm() {
 					<p className="upload-form__label">video thumbnail</p>
 					<img className="upload-form__thumbnail" src={Thumbnail} alt="" />
 				</div>
-				<form className="upload-form__form">
+				<form className="upload-form__form" ref={formRef}>
 					<div className="upload-form__form-container">
 						<div className="upload-form__video-title">
-							<label className="upload-form__label" htmlFor="video-title" name="videoTitle">
+							<label className="upload-form__label" htmlFor="title" name="videoTitle">
 								title your video
 							</label>
 							<input
+								type="text"
 								className="upload-form__input-field"
 								name="videoTitle"
-								id="video-title"
+								id="title"
 								placeholder="Add a title to your video"
 								value={title}
 								onChange={(e) => setTitle(e.target.value)}
 							/>
 						</div>
 						<div className="upload-form__video-description">
-							<label className="upload-form__label" htmlFor="video-description" name="videoDesctiption">
+							<label className="upload-form__label" htmlFor="description" name="videoDesctiption">
 								add a video description
 							</label>
 							<textarea
+								type="text"
 								className="upload-form__input-field"
 								name="videoDesctiption"
-								id="video-description"
+								id="description"
 								rows="4"
 								placeholder="Add a description to your video"
 								value={description}

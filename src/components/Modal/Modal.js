@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Modal.scss";
+import React, { useEffect, useState } from 'react';
+import './Modal.scss';
 
 function Modal({ show, onClose }) {
 	const [countdown, setCountdown] = useState(3);
-	const navigate = useNavigate();
+	const [modal, setModal] = useState(true);
 
 	useEffect(() => {
 		if (!show) return;
@@ -14,14 +13,13 @@ function Modal({ show, onClose }) {
 				if (prev === 1) {
 					clearInterval(timer);
 					onClose();
-					navigate("/");
 				}
 				return prev - 1;
 			});
 		}, 1000);
 
 		return () => clearInterval(timer);
-	}, [show, navigate, onClose]);
+	}, [show, onClose]);
 
 	if (!show) return null;
 
