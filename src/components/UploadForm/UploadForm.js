@@ -1,6 +1,6 @@
 import './UploadForm.scss';
 import Thumbnail from '../../assets/Images/Upload-video-preview.jpg';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 import buttonIcon from '../../assets/Icons/publish.svg';
@@ -43,6 +43,8 @@ function UploadForm() {
 		setImage(null);
 		setIsModalOpen(true);
 	};
+
+	useEffect(() => {}, [isModalOpen]);
 
 	const handleCloseModal = () => {
 		if (isModalOpen === true) setIsModalOpen(false);
