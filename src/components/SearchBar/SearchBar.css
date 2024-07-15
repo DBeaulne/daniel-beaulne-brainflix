@@ -62,7 +62,6 @@ solid @ 100% opacity, unless stated otherwise */
   font-family: "Avenir-Next";
   font-size: 0.813rem;
   line-height: 1.25rem;
-  color: #afafaf;
   background-image: url("../../assets/Icons/search.svg");
   background-position: 0.75rem center;
   background-repeat: no-repeat;
@@ -75,4 +74,13 @@ solid @ 100% opacity, unless stated otherwise */
     width: 100%;
     margin-right: unset;
   }
+}
+.searchBar__input-field::-moz-placeholder {
+  color: #323232;
+}
+.searchBar__input-field::placeholder {
+  color: #323232;
+}
+.searchBar__input-field:focus-visible {
+  outline-color: #0095ff;
 }/*# sourceMappingURL=SearchBar.css.map */

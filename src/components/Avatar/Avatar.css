@@ -111,6 +111,6 @@ solid @ 100% opacity, unless stated otherwise */
   display: flex;
 }
 
-#comment-avatar {
-  display: flex;
-}/*# sourceMappingURL=Avatar.css.map */
+/* .comment-avatar {
+	display: flex;
+} *//*# sourceMappingURL=Avatar.css.map */

@@ -45,6 +45,11 @@ solid @ 100% opacity, unless stated otherwise */
   align-items: flex-start;
   border-bottom: 1px solid #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .commentForm {
+    padding-bottom: 1.25rem;
+  }
+}
 .commentForm__title {
   padding-bottom: 0.5rem;
 }
@@ -79,6 +84,7 @@ solid @ 100% opacity, unless stated otherwise */
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .commentForm__input-container {
@@ -107,6 +113,7 @@ solid @ 100% opacity, unless stated otherwise */
   background-color: #fafafa;
   padding: 0.75rem;
   min-width: 15rem;
+  height: 6rem;
   font-family: "Avenir-Next";
   font-size: 0.813rem;
   line-height: 1.25rem;
@@ -115,9 +122,19 @@ solid @ 100% opacity, unless stated otherwise */
   border: 1px solid #0095ff;
   outline: 1px solid #0095ff;
 }
+.commentForm__form-input::-moz-placeholder {
+  color: #323232;
+}
+.commentForm__form-input::placeholder {
+  color: #323232;
+}
+.commentForm__form-input:focus-visible {
+  outline-color: #0095ff;
+}
 @media screen and (min-width: 768px) {
   .commentForm__form-input {
-    padding: unset;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
   }
 }
 .commentForm__form-label {
@@ -130,18 +147,4 @@ solid @ 100% opacity, unless stated otherwise */
 .commentForm__btn-container {
   display: flex;
   width: 15rem;
-}
-
-textarea {
-  resize: none;
-}
-textarea::-moz-placeholder {
-  text-indent: 1rem;
-  vertical-align: center;
-  padding-top: 0.7rem;
-}
-textarea::placeholder {
-  text-indent: 1rem;
-  vertical-align: center;
-  padding-top: 0.7rem;
 }/*# sourceMappingURL=CommentForm.css.map */

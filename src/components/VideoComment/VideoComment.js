@@ -1,50 +1,40 @@
-import "./VideoComment.scss";
-import React from "react";
-import Avatar from "../Avatar/Avatar";
+import './VideoComment.scss';
+import React, { useState } from 'react';
+import Avatar from '../Avatar/Avatar';
+import { convertDate } from '../../utils/dateUtils';
+import Icon from '../Icon/Icon';
+import trashCan from '../../assets/Icons/icon-delete.svg';
 
-function VideoComment({ videoComments }) {
-	const comments = videoComments;
+function VideoComment({ videoComments, delComment }) {
+	const [commentId, setCommentId] = useState(null);
 
-	const millisecondMinutes = 60000;
-	const millisecondHours = 60 * millisecondMinutes;
-	const millisecondDays = 24 * millisecondHours;
-	const millisecondMonths = 30 * millisecondDays;
-	const millisecondYears = 12 * millisecondMonths;
+	const handleDeleteComment = async (e) => {
+		// function to handle deletion of comment when user clicks on the trashCan icon
+		e.preventDefault();
+		delComment(e.target.id);
+	};
 
-	function ConvertDate(date) {
-		const currentDate = new Date();
-		const timeDateDifferential = currentDate - date;
-		if (timeDateDifferential < millisecondMinutes) {
-			return "Less than a minute ago";
-		} else if (timeDateDifferential < millisecondHours) {
-			const minutes = Math.floor(timeDateDifferential / millisecondMinutes);
-			return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
-		} else if (timeDateDifferential < millisecondDays) {
-			const hours = Math.floor(timeDateDifferential / millisecondHours);
-			return `${hours} hour${hours > 1 ? "s" : ""} ago`;
-		} else if (timeDateDifferential < millisecondMonths) {
-			const days = Math.floor(timeDateDifferential / millisecondDays);
-			return `${days} day${days > 1 ? "s" : ""} ago`;
-		} else if (timeDateDifferential < millisecondYears) {
-			const months = Math.floor(timeDateDifferential / millisecondMonths);
-			return `${months} month${months > 1 ? "s" : ""} ago`;
-		} else {
-			const years = Math.floor(timeDateDifferential / millisecondYears);
-			return `${years} year${years > 1 ? "s" : ""} ago`;
-		}
-	}
-
-	return comments?.map((comment) => (
-		<div className="videoComment" key={comment.id}>
-			<Avatar id="comment-avatar" />
-			<div className="videoComment__wrapper">
-				<div className="videoComment__comment-info">
-					<p className="videoComment__user-name">{comment.name}</p>
-					<p className="videoComment__timestamp">{ConvertDate(comment.timestamp)}</p>
+	return videoComments
+		?.sort(function (a, b) {
+			return b.timestamp - a.timestamp;
+		})
+		.map((comment) => (
+			<div className="videoComment" key={comment.id}>
+				<Avatar />
+				<div className="videoComment__wrapper">
+					<div className="videoComment__comment-info">
+						<p className="videoComment__user-name">{comment.name}</p>
+						<div className="videoComment__time-wrapper">
+							<p className="videoComment__timestamp">{convertDate(comment.timestamp)}</p>
+							<div className="videoComment__icon-container" onClick={handleDeleteComment}>
+								<Icon icon={trashCan} id={comment.id} />
+							</div>
+						</div>
+					</div>
+					<p className="videoComment__comment">{comment.comment}</p>
 				</div>
-				<p className="videoComment__comment">{comment.comment}</p>
 			</div>
-		</div>
-	));
+		));
 }
+
 export default VideoComment;

@@ -1,6 +1,6 @@
 /* Index page styling*/
-@use "./styles/partials/global";
-@use "./styles/partials/mixin";
+@use './styles/partials/global';
+@use './styles/partials/mixin';
 
 /* Initialization */
 * {
@@ -9,7 +9,7 @@
 	box-sizing: border-box;
 	color: global.$BrainFlix-Black;
 	font-weight: 400;
-	font-family: global.$siteFontFamily, "Times New Roman", Times, serif;
+	font-family: global.$siteFontFamily, 'Times New Roman', Times, serif;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 }
@@ -18,7 +18,7 @@ a {
 	text-decoration: none;
 }
 
-h2 {
+h1 {
 	@include global.mobile-page-header;
 	font-weight: 700;
 }

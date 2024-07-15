@@ -86,4 +86,7 @@ solid @ 100% opacity, unless stated otherwise */
     max-width: 15rem;
     justify-content: space-between;
   }
+}
+.header__button-container a {
+  width: 100%;
 }/*# sourceMappingURL=Header.css.map */

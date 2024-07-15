@@ -1,0 +1,22 @@
+// Modal window styling
+@use "../../styles/partials/global";
+@use "../../styles/partials/mixin";
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(50, 50, 50, 0.25); // rgba value for global.$BrainFlix-Black
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal {
+	background: global.$White;
+	padding: 1.25rem;
+	border-radius: 4px;
+	text-align: center;
+}

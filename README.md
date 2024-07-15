@@ -34,7 +34,9 @@
 - complete all component styling across all breakpoints
 - final commit before merging to main
   > > >
-- Sprint 2 start
+
+## Sprint 2 start
+
 - install react-router-dom, axios, and sass as required
 - correct VideoStats.js code warning for img tag not having alt attribute
 - correct feedback noted from Sprint 1
@@ -45,3 +47,26 @@
 - implement sprint 1 deep dive for date conversion
 - final commit before submission
   > > >
+
+## Sprint 3 start
+
+- implement code that was missed in Sprint 2
+- implement modal window for upload notification and re-direct to home page
+- implement code to clear out upload form field on cancel
+- split converDate function from VideoComment and placed it in a new src/utils directory
+
+### feature/custom-api branch
+
+- edited code to implement the local api requirements of the sprint
+- integrated functionality for static file retrieval for poster images
+- debug code for posting videos
+- completed basic requirements of the sprint
+
+### feature/sprint-2-feedback
+
+- Ensure the <h1> element is used for the most important heading on your webpage and is not used more than once.
+- - corrected, promoted mainVideo\_\_video-title <h2> to <h1>
+- Alt text can improve your page's SEO rank and is crucial for accessibility. They should always be included and be concise but descriptive
+- - some img tags do not have alt text. These img tags are for the avatars. Are avatars relavent to SEO? google search for user avatar images come up empty
+=======
+

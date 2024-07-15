@@ -50,6 +50,11 @@
 		font-weight: 600;
 	}
 
+	&__time-wrapper {
+		display: flex;
+		flex-direction: row;
+	}
+
 	&__timestamp {
 		color: global.$Silver;
 	}
