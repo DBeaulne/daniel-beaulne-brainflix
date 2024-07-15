@@ -64,8 +64,8 @@
 
 ### feature/sprint-2-feedback
 
-- Ensure the '<h1>' element is used for the most important heading on your webpage and is not used more than once.
-- - corrected, promoted mainVideo\video-title <h2> to <h1>
+- Ensure the 'h1' element is used for the most important heading on your webpage and is not used more than once.
+- - corrected, promoted mainVideo\video-title h2 to h1
 - Alt text can improve your page's SEO rank and is crucial for accessibility. They should always be included and be concise but descriptive
 - - some img tags do not have alt text. These img tags are for the avatars. Are avatars relavent to SEO? google search for user avatar images come up empty
 =======
