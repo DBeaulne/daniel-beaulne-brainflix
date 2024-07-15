@@ -68,3 +68,5 @@
 - - corrected, promoted mainVideo\_\_video-title <h2> to <h1>
 - Alt text can improve your page's SEO rank and is crucial for accessibility. They should always be included and be concise but descriptive
 - - some img tags do not have alt text. These img tags are for the avatars. Are avatars relavent to SEO? google search for user avatar images come up empty
+=======
+
