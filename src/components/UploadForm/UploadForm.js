@@ -1,6 +1,6 @@
 import './UploadForm.scss';
 import Thumbnail from '../../assets/Images/Upload-video-preview.jpg';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 import buttonIcon from '../../assets/Icons/publish.svg';
@@ -13,7 +13,7 @@ function UploadForm() {
 	const [image, setImage] = useState('image9.jpg'); // state for upload video image. hard-coded image for now
 	const [error, setErrot] = useState(''); // error state to capture any errors thrown in try...catch statement
 	const [success, setSuccess] = useState(''); // success state. Future use state
-	const [isModalOpen, setIsModalOpen] = useState(false); // modal state to control display of modal window
+	const [modal, setModal] = useState(false); // modal state to control display of modal window
 	const formRef = useRef();
 	const navigate = useNavigate();
 
@@ -23,13 +23,26 @@ function UploadForm() {
 		this.image = image;
 	};
 
+	const handleModalClose = () => {
+		// modal close function
+		setModal(false);
+		navigate('/');
+	};
+
+	const handleModalOpen = () => {
+		// modal open function
+		setModal(true);
+	};
+
 	const handleUploadClick = async (e) => {
-		// logic to handle create the uploadForm data to be sent to server
+		// logic to handle  and create the uploadForm data to be sent to server
 		e.preventDefault();
 		const uploadFormData = new videoObject(title, description, image);
 
 		try {
-			await uploadVideo(uploadFormData).then((res) => handleHouseKeeping());
+			await uploadVideo(uploadFormData)
+				.then((res) => handleHouseKeeping())
+				.then((res) => handleModalOpen());
 		} catch (err) {
 			setErrot('Failed to upload video');
 			console.error('Error uploading video:', err);
@@ -37,18 +50,11 @@ function UploadForm() {
 	};
 
 	const handleHouseKeeping = () => {
+		// housekeep function to make the handleUploadclick function more concise
 		setSuccess('Video uploaded successfully');
 		setTitle('');
 		setDescription('');
 		setImage(null);
-		setIsModalOpen(true);
-	};
-
-	useEffect(() => {}, [isModalOpen]);
-
-	const handleCloseModal = () => {
-		if (isModalOpen === true) setIsModalOpen(false);
-		navigate('/');
 	};
 
 	// Function to handle the cancel click event
@@ -107,7 +113,7 @@ function UploadForm() {
 					<button className="upload-form__cancel-btn" type="button" onClick={handleCancel}>
 						Cancel
 					</button>
-					<Modal show={isModalOpen} onClose={handleCloseModal} />
+					<Modal isOpen={modal} onClose={handleModalClose} />
 				</div>
 			</div>
 		</section>

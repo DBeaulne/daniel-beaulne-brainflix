@@ -1,9 +1,10 @@
-import "./VideoStats.scss";
-import React from "react";
-import viewsIcon from "../../assets/Icons/views.svg";
-import likesIcon from "../../assets/Icons/likes.svg";
+import './VideoStats.scss';
+import React from 'react';
+import viewsIcon from '../../assets/Icons/views.svg';
+import likesIcon from '../../assets/Icons/likes.svg';
 
 function VideoStats({ video }) {
+	// display the stats of the video currently displayed
 	return (
 		<div className="videoStats">
 			{video ? (

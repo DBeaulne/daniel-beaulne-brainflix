@@ -2,6 +2,7 @@ import './VideoPlayer.scss';
 import React from 'react';
 
 function VideoPlayer({ video }) {
+	// inactive video player -- this component just displays the video poster image
 	return (
 		<>
 			{video ? (

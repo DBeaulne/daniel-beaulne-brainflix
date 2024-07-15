@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function NextVideoCard({ next }) {
+	// this function returns the contents of the video card based on the props iterated through by the parent component NextVideos
 	return (
 		<>
 			<Link to={`/videos/${next.id}`}>
